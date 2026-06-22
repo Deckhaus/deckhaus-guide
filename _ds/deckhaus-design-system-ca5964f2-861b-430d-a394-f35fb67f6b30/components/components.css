@@ -1,0 +1,184 @@
+/* ============================================================
+   Deckhaus — Component styles
+   Class-based styling for reusable primitives. Shipped in the
+   styles.css closure so hover/focus/press states work for
+   consumers. JSX components reference these classes.
+   ============================================================ */
+
+/* ---------------- Button ---------------- */
+.dh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out),
+              box-shadow var(--dur-fast) var(--ease-out);
+}
+.dh-btn:focus-visible { outline: none; box-shadow: var(--ring-focus); }
+.dh-btn:active { transform: translateY(1px); }
+.dh-btn[disabled], .dh-btn[aria-disabled="true"] {
+  opacity: 0.4; pointer-events: none; cursor: not-allowed;
+}
+
+/* sizes */
+.dh-btn--sm { height: 34px; padding: 0 14px; font-size: var(--text-sm); }
+.dh-btn--md { height: 42px; padding: 0 20px; font-size: var(--text-base); }
+.dh-btn--lg { height: 52px; padding: 0 28px; font-size: var(--text-md); }
+
+/* variants */
+.dh-btn--primary { background: var(--lime-500); color: var(--ink-900); }
+.dh-btn--primary:hover { background: var(--lime-400); }
+.dh-btn--primary:active { background: var(--lime-600); }
+
+.dh-btn--secondary {
+  background: transparent; color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+.dh-btn--secondary:hover { background: var(--surface-hover); border-color: var(--border-strong); }
+
+.dh-btn--ghost { background: transparent; color: var(--text-secondary); }
+.dh-btn--ghost:hover { background: var(--surface-hover); color: var(--text-primary); }
+
+.dh-btn--solid {
+  background: var(--surface-raised); color: var(--text-primary);
+  border-color: var(--border-subtle);
+}
+.dh-btn--solid:hover { background: var(--surface-hover); }
+
+.dh-btn--block { width: 100%; }
+
+/* ---------------- Icon button ---------------- */
+.dh-iconbtn {
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border-subtle);
+  background: transparent; color: var(--text-secondary);
+  border-radius: var(--radius-md); cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out);
+}
+.dh-iconbtn:hover { background: var(--surface-hover); color: var(--text-primary); }
+.dh-iconbtn:focus-visible { outline: none; box-shadow: var(--ring-focus); }
+.dh-iconbtn--sm { width: 34px; height: 34px; }
+.dh-iconbtn--md { width: 42px; height: 42px; }
+.dh-iconbtn--ghost { border-color: transparent; }
+.dh-iconbtn--accent { background: var(--lime-500); color: var(--ink-900); border-color: transparent; }
+.dh-iconbtn--accent:hover { background: var(--lime-400); color: var(--ink-900); }
+
+/* ---------------- Badge / Tag ---------------- */
+.dh-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono); font-size: var(--text-2xs);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 4px 9px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border-default); color: var(--text-secondary);
+  background: transparent; line-height: 1;
+}
+.dh-badge--accent { background: var(--lime-tint); border-color: var(--lime-tint-strong); color: var(--lime-400); }
+.dh-badge--solid  { background: var(--lime-500); border-color: transparent; color: var(--ink-900); }
+.dh-badge--positive { color: var(--signal-positive); border-color: color-mix(in srgb, var(--signal-positive) 35%, transparent); }
+.dh-badge--negative { color: var(--signal-negative); border-color: color-mix(in srgb, var(--signal-negative) 35%, transparent); }
+.dh-badge--dot::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+.dh-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-sans); font-size: var(--text-sm); font-weight: var(--weight-regular);
+  padding: 6px 12px; border-radius: var(--radius-pill);
+  border: 1px solid var(--border-default); color: var(--text-secondary);
+  background: var(--surface-card); cursor: default;
+}
+.dh-tag--interactive { cursor: pointer; transition: border-color var(--dur-fast), color var(--dur-fast); }
+.dh-tag--interactive:hover { border-color: var(--border-strong); color: var(--text-primary); }
+.dh-tag--active { border-color: var(--lime-500); color: var(--lime-400); background: var(--lime-tint); }
+
+/* ---------------- Card ---------------- */
+.dh-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  transition: border-color var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out),
+              background var(--dur-base) var(--ease-out);
+}
+.dh-card--interactive { cursor: pointer; }
+.dh-card--interactive:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+.dh-card--accent { border-color: var(--lime-tint-strong); }
+.dh-card--flush { padding: 0; overflow: hidden; }
+
+/* numbered service row */
+.dh-service {
+  display: grid; grid-template-columns: 56px 1fr auto; align-items: start;
+  gap: var(--space-6); padding: var(--space-8) 0;
+  border-top: 1px solid var(--border-subtle);
+  transition: opacity var(--dur-base) var(--ease-out);
+}
+.dh-service__idx { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--text-accent); font-variant-numeric: tabular-nums; padding-top: 6px; }
+.dh-service__title { font-family: var(--font-sans); font-weight: var(--weight-bold); font-size: var(--text-xl); line-height: var(--leading-snug); letter-spacing: 0; color: var(--text-primary); margin: 0 0 10px; }
+.dh-service__desc { font-family: var(--font-sans); font-size: var(--text-base); line-height: var(--leading-normal); color: var(--text-muted); margin: 0; max-width: 52ch; }
+
+/* ---------------- Inputs ---------------- */
+.dh-field { display: flex; flex-direction: column; gap: var(--space-2); }
+.dh-label { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+.dh-input, .dh-textarea, .dh-select {
+  font-family: var(--font-sans); font-size: var(--text-base); color: var(--text-primary);
+  background: var(--surface-inset); border: 1px solid var(--border-default);
+  border-radius: var(--radius-control); padding: 0 14px; height: 44px; width: 100%;
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.dh-textarea { height: auto; padding: 12px 14px; min-height: 96px; resize: vertical; line-height: 1.5; }
+.dh-input::placeholder, .dh-textarea::placeholder { color: var(--text-disabled); }
+.dh-input:focus, .dh-textarea:focus, .dh-select:focus { outline: none; border-color: var(--lime-500); box-shadow: var(--ring-focus); }
+.dh-input:disabled, .dh-textarea:disabled, .dh-select:disabled { opacity: 0.45; cursor: not-allowed; }
+.dh-select { appearance: none; -webkit-appearance: none; cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%), linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+  background-position: calc(100% - 18px) 19px, calc(100% - 13px) 19px; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
+.dh-field--error .dh-input, .dh-field--error .dh-textarea { border-color: var(--signal-negative); }
+.dh-hint { font-family: var(--font-sans); font-size: var(--text-xs); color: var(--text-muted); }
+.dh-hint--error { color: var(--signal-negative); }
+
+/* ---------------- Checkbox & Switch ---------------- */
+.dh-check { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-family: var(--font-sans); font-size: var(--text-base); color: var(--text-secondary); user-select: none; }
+.dh-check__box { width: 20px; height: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); background: var(--surface-inset); display: inline-flex; align-items: center; justify-content: center; flex: none; transition: all var(--dur-fast) var(--ease-out); }
+.dh-check__box svg { width: 13px; height: 13px; stroke: var(--ink-900); opacity: 0; transition: opacity var(--dur-fast); }
+.dh-check[data-checked="true"] .dh-check__box { background: var(--lime-500); border-color: var(--lime-500); }
+.dh-check[data-checked="true"] .dh-check__box svg { opacity: 1; }
+.dh-check:focus-within .dh-check__box { box-shadow: var(--ring-focus); }
+
+.dh-switch { position: relative; width: 44px; height: 26px; border-radius: var(--radius-pill); background: var(--surface-raised); border: 1px solid var(--border-strong); cursor: pointer; transition: background var(--dur-base) var(--ease-out), border-color var(--dur-base); flex: none; padding: 0; }
+.dh-switch__thumb { position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--text-secondary); transition: transform var(--dur-base) var(--ease-out), background var(--dur-base); }
+.dh-switch[data-checked="true"] { background: var(--lime-500); border-color: var(--lime-500); }
+.dh-switch[data-checked="true"] .dh-switch__thumb { transform: translateX(18px); background: var(--ink-900); }
+.dh-switch:focus-visible { outline: none; box-shadow: var(--ring-focus); }
+
+/* ---------------- Stat block ---------------- */
+.dh-stat { display: flex; flex-direction: column; gap: 12px; }
+.dh-stat__value { font-family: var(--font-display); font-weight: var(--weight-display); font-size: var(--text-5xl); line-height: 1.04; letter-spacing: 0; color: var(--text-primary); }
+.dh-stat__value em { font-style: normal; color: var(--lime-500); }
+.dh-stat__label { font-family: var(--font-mono); font-size: var(--text-xs); line-height: var(--leading-caption); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); max-width: 24ch; }
+
+/* ---------------- Eyebrow ---------------- */
+.dh-eyebrow-c { display: inline-flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: var(--text-xs); line-height: var(--leading-caption); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--text-muted); }
+.dh-eyebrow-c::before { content: ""; width: 24px; height: 1px; background: var(--accent-tick); flex: none; }
+.dh-eyebrow-c--plain::before { display: none; }
+.dh-eyebrow-c--accent { color: var(--lime-400); }
+
+/* ---------------- Avatar ---------------- */
+.dh-avatar { display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--surface-raised); border: 1px solid var(--border-subtle); color: var(--text-secondary); font-family: var(--font-mono); font-weight: var(--weight-bold); overflow: hidden; flex: none; }
+.dh-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.dh-avatar--sm { width: 32px; height: 32px; font-size: 12px; }
+.dh-avatar--md { width: 44px; height: 44px; font-size: 15px; }
+.dh-avatar--lg { width: 64px; height: 64px; font-size: 20px; }

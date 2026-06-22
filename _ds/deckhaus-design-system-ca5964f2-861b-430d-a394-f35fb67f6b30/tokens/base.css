@@ -1,0 +1,116 @@
+/* ============================================================
+   Deckhaus — Base layer
+   Element resets + a few editorial helper classes that lean on
+   the token system. Components & kits may use these freely.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Guard: the browser may never fake a bold/italic face. Hector ships
+     a 400 weight only — without this it would synthesize faux-bold. */
+  font-synthesis: none;
+}
+
+/* Brand rule: headings are NOT UA-bold. Display headings are Hector
+   Regular (400); Geometria headings opt into bold explicitly via
+   font-weight:700 / .dh-heading / component classes, which override
+   this element-level reset. This stops <h1>/<h2>/<h3>/<blockquote>
+   from inheriting the UA `bold` default and faux-bolding Hector. */
+h1, h2, h3, h4, h5, h6, blockquote {
+  font-weight: var(--weight-regular);
+}
+
+/* Every theme scope must re-assert the color PROPERTY from its own
+   --text-primary custom property — otherwise a nested data-theme="dark"
+   section inherits the literal color resolved under the light page. */
+[data-theme] {
+  color: var(--text-primary);
+}
+
+::selection {
+  background: var(--lime-500);
+  color: var(--ink-900);
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ---- Editorial helpers ---- */
+
+.dh-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-eyebrow);
+  line-height: var(--leading-caption);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.dh-eyebrow--accent { color: var(--text-accent); }
+
+.dh-display {
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--text-primary);
+}
+
+.dh-heading {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+
+.dh-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+}
+
+.dh-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-normal);
+  line-height: var(--leading-caption);
+  color: var(--text-secondary);
+}
+
+/* Numbered index label, e.g. service lists — 01, 02 … */
+.dh-index {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hairline rule used throughout the system */
+.dh-rule {
+  border: 0;
+  border-top: 1px solid var(--border-subtle);
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

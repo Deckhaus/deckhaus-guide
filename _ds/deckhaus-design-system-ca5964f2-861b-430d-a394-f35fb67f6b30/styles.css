@@ -1,0 +1,11 @@
+/* ============================================================
+   Deckhaus Design System — global entry point
+   Consumers link THIS file. Import-only (no rules here).
+   ============================================================ */
+
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/layout.css";
+@import "./tokens/base.css";
+@import "./components/components.css";

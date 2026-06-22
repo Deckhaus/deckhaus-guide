@@ -1,0 +1,100 @@
+/* ============================================================
+   Deckhaus — Color System
+   Dark premium interface. Warm near-black neutrals,
+   off-white paper, one controlled signal accent: Deckhaus Chartreuse.
+   ============================================================ */
+
+:root {
+  /* ---- Neutral ink ramp (warm near-black → off-white) ---- */
+  --ink-900: #0A0A0B;   /* base background */
+  --ink-850: #0E0E10;   /* page sections */
+  --ink-800: #141416;   /* elevated surface */
+  --ink-750: #18181B;   /* card */
+  --ink-700: #1D1D21;   /* raised card / input */
+  --ink-600: #26262B;   /* hover surface */
+  --ink-500: #34343A;   /* strong border / divider */
+  --ink-400: #4C4C54;   /* muted border */
+  --ink-300: #6E6E78;   /* disabled text */
+  --ink-200: #9A9AA4;   /* muted text */
+  --ink-100: #C2C2CB;   /* secondary text */
+  --paper:    #F4F4EF;  /* primary foreground (warm off-white) */
+  --paper-pure: #FFFFFF;
+
+  /* ---- Accent — Deckhaus Chartreuse (refined acid olive) ---- */
+  /* ---- Accent — Deckhaus Chartreuse (mature acid olive) ---- */
+  --lime-700: #7C8A2E;
+  --lime-600: #9AAD3C;  /* press / darker */
+  --lime-500: #B7C94A;  /* PRIMARY accent — muted chartreuse */
+  --lime-400: #C9D873;  /* hover / lighter */
+  --lime-300: #DEE8AB;  /* subtle */
+  --lime-text: #9EAD3F; /* accent text on paper (legible) */
+  --lime-pale: #EEF3D4; /* pale tint — subtle backgrounds */
+  --lime-tint: rgba(183, 201, 74, 0.10);
+  --lime-tint-strong: rgba(183, 201, 74, 0.18);
+
+  /* ---- Functional signals (restrained) ---- */
+  --signal-positive: #6FE39B;
+  --signal-negative: #FF6A5C;
+  --signal-warning:  #FFC24B;
+  --signal-info:     #6FA8FF;
+}
+
+/* ============================================================
+   Semantic aliases — apply to the default (dark) surface AND any
+   element explicitly scoped data-theme="dark" inside a light page.
+   ============================================================ */
+:root,
+[data-theme="dark"] {
+  --bg-base:        var(--ink-900);
+  --bg-section:     var(--ink-850);
+  --bg-elevated:    var(--ink-800);
+
+  --surface-card:    var(--ink-750);
+  --surface-raised:  var(--ink-700);
+  --surface-hover:   var(--ink-600);
+  --surface-inset:   var(--ink-850);
+
+  --border-subtle:  rgba(255, 255, 255, 0.07);
+  --border-default: rgba(255, 255, 255, 0.12);
+  --border-strong:  rgba(255, 255, 255, 0.20);
+  --border-accent:  var(--lime-500);
+
+  --text-primary:   var(--paper);
+  --text-secondary: var(--ink-100);
+  --text-muted:     var(--ink-200);
+  --text-disabled:  var(--ink-300);
+  --text-accent:    var(--lime-500);
+  --accent-tick:    var(--lime-500);
+  --text-on-accent: var(--ink-900);
+
+  --accent:          var(--lime-500);
+  --accent-hover:    var(--lime-400);
+  --accent-press:    var(--lime-600);
+  --accent-contrast: var(--ink-900);
+}
+
+/* ---- Light editorial surface (slides, print, light sections) ---- */
+[data-theme="light"] {
+  --bg-base:        var(--paper);
+  --bg-section:     #ECECE6;
+  --bg-elevated:    var(--paper-pure);
+
+  --surface-card:    var(--paper-pure);
+  --surface-raised:  var(--paper-pure);
+  --surface-hover:   #ECECE6;
+  --surface-inset:   #E6E6DF;
+
+  --border-subtle:  rgba(10, 10, 11, 0.08);
+  --border-default: rgba(10, 10, 11, 0.14);
+  --border-strong:  rgba(10, 10, 11, 0.24);
+
+  --text-primary:   var(--ink-900);
+  --text-secondary: #34343A;
+  --text-muted:     #5C5C64;
+  --text-disabled:  #9A9AA4;
+  --text-on-accent: var(--ink-900);
+
+  /* Accent text needs a darker olive to stay legible on paper */
+  --text-accent:   var(--lime-text);
+  --accent-tick:   var(--lime-text);
+}

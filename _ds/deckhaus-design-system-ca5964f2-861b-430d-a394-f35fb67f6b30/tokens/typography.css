@@ -1,0 +1,55 @@
+/* ============================================================
+   Deckhaus — Typography
+   Hector (display, REGULAR ONLY) · Geometria (sans) · IBM Plex Mono (mono)
+   Editorial rhythm, zero tracking, wide mono eyebrows.
+   Brand rule: tracking is 0 everywhere; Hector is never bold —
+   impact comes from scale, composition, spacing and contrast.
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: "Hector", "Geometria", system-ui, sans-serif;
+  --font-sans:    "Geometria", system-ui, -apple-system, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* ---- Type scale (editorial, generous) ---- */
+  --text-2xs:  11px;
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   21px;
+  --text-xl:   26px;
+  --text-2xl:  33px;
+  --text-3xl:  44px;
+  --text-4xl:  60px;
+  --text-5xl:  80px;
+  --text-6xl:  108px;   /* hero display */
+
+  /* ---- Weights ----
+     Hector display is REGULAR ONLY (400). Never bold/black, never
+     faux-bold. Geometria carries 400/700 for body & UI headings. */
+  --weight-regular: 400;
+  --weight-display: 400;  /* Hector — locked to regular */
+  --weight-bold:    700;  /* Geometria only */
+
+  /* ---- Line height (breathable, editorial) ---- */
+  --leading-none:      1;
+  --leading-tight:     1.1;   /* hero display, stacked (1.08–1.14) */
+  --leading-statement: 1.12;  /* large editorial statements */
+  --leading-snug:      1.16;  /* section titles */
+  --leading-normal:    1.6;   /* body (1.55–1.65) */
+  --leading-relaxed:   1.65;  /* long-form */
+  --leading-caption:   1.45;  /* mono labels & captions */
+
+  /* ---- Letter spacing ----
+     Brand rule: tracking is 0 across the system. Never negative,
+     never compressed for impact — impact comes from scale,
+     composition and spacing. Positive tracking is reserved for
+     small mono uppercase eyebrows/labels only. */
+  --tracking-display: 0;       /* Hector display — no tightening */
+  --tracking-tight:   0;       /* headings */
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;  /* small caps / supporting labels */
+  --tracking-eyebrow: 0.18em;  /* mono uppercase labels */
+}
