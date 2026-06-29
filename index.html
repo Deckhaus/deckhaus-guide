@@ -22,16 +22,6 @@
 <meta name="twitter:description" content="Design & visual communication — present, launch and grow.">
 <meta name="twitter:image" content="https://deckhaus-guide.vercel.app/assets/og.png">
 <script src="./support.js"></script>
-<!-- Vercel Web Analytics -->
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-<!-- Vercel Speed Insights -->
-<script>
-  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/speed-insights/script.js"></script>
 </head>
 <body>
 <x-dc>
@@ -94,6 +84,8 @@
       [data-step-cards] > div p { max-width: none !important; }
       [data-step-inline] { display: block !important; }
       [data-brief-formgrid] { grid-template-columns: 1fr !important; }
+      [data-droom-grid] { grid-template-columns: 1fr !important; }
+      [data-logo-strip] { gap: 30px 38px !important; }
     }
   </style>
 </helmet>
@@ -110,35 +102,38 @@
   </div>
 </template>
 
-<div data-guide-root style="position:relative; font-family:var(--font-sans); background:#F4F4EF;">
+<div data-guide-root="" style="position:relative; font-family:var(--font-sans); background:#F4F4EF;">
 
   <!-- theme backdrop: crossfades paper<->dark with the active section -->
-  <div data-backdrop style="position:fixed; inset:0; z-index:-1; background:#F4F4EF; transition:background-color .6s cubic-bezier(.16,1,.3,1); pointer-events:none;"></div>
+  <div data-backdrop="" style="position:fixed; inset:0; z-index:-1; background:#F4F4EF; transition:background-color .6s cubic-bezier(.16,1,.3,1); pointer-events:none;"></div>
 
   <!-- progress bar -->
   <div style="position:fixed; top:0; left:0; right:0; height:3px; background:transparent; z-index:120; pointer-events:none;">
-    <div data-progress style="height:100%; width:0%; background:#B7C94A;"></div>
+    <div data-progress="" style="height:100%; width:0%; background:#B7C94A;"></div>
   </div>
 
   <!-- side index -->
-  <div data-nav style="position:fixed; top:50%; right:clamp(12px,2vw,30px); transform:translateY(-50%); z-index:115; display:flex; flex-direction:column; gap:16px; color:#F4F4EF; align-items:flex-end; transition:color .6s cubic-bezier(.16,1,.3,1);">
-    <button data-navdot type="button" title="Cover" aria-label="Cover" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:#9EAD3F; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:1;"></button>
-    <button data-navdot type="button" title="What we do" aria-label="What we do" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
-    <button data-navdot type="button" title="Why it matters" aria-label="Why it matters" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
-    <button data-navdot type="button" title="How we can help" aria-label="How we can help" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
-    <button data-navdot type="button" title="What we create" aria-label="What we create" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
-    <button data-navdot type="button" title="How we work" aria-label="How we work" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
-    <button data-navdot type="button" title="One system" aria-label="One system" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
-    <button data-navdot type="button" title="Case study" aria-label="Case study" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
-    <button data-navdot type="button" title="Let's work together" aria-label="Let's work together" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
+  <div data-nav="" style="position:fixed; top:50%; right:clamp(12px,2vw,30px); transform:translateY(-50%); z-index:115; display:flex; flex-direction:column; gap:16px; color:#F4F4EF; align-items:flex-end; transition:color .6s cubic-bezier(.16,1,.3,1);">
+    <button data-navdot="" type="button" title="Cover" aria-label="Cover" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:#9EAD3F; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:1;"></button>
+    <button data-navdot="" type="button" title="What we do" aria-label="What we do" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
+    <button data-navdot="" type="button" title="Why it matters" aria-label="Why it matters" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
+    <button data-navdot="" type="button" title="How we can help" aria-label="How we can help" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
+    <button data-navdot="" type="button" title="What we create" aria-label="What we create" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
+    <button data-navdot="" type="button" title="How we work" aria-label="How we work" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
+    <button data-navdot="" type="button" title="One system" aria-label="One system" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
+    <button data-navdot="" type="button" title="Case study" aria-label="Case study" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
+    <button data-navdot="" type="button" title="Let's work together" aria-label="Let's work together" style="width:11px; height:11px; padding:0; border-radius:50%; border:1.5px solid currentColor; background:transparent; cursor:pointer; transition:transform .3s ease, background .3s ease, opacity .3s ease; opacity:.45; transform:scale(.62);"></button>
   </div>
 
   <!-- ═══════════ 01 — COVER / HERO ═══════════ -->
-  <section data-sec data-theme="dark" data-screen-label="01 Cover" style="position:relative; min-height:100vh; background:#0A0A0B; color:#F4F4EF; overflow:hidden; display:flex; flex-direction:column;">
+  <section data-sec="" data-hero-glow="" data-theme="dark" data-screen-label="01 Cover" style="position:relative; min-height:100vh; background:#0A0A0B; color:#F4F4EF; overflow:hidden; display:flex; flex-direction:column;">
     <div data-parallax-grid="0.12" style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:88px 88px; pointer-events:none;"></div>
+    <!-- living grid: the Swiss grid lights up lime around the cursor -->
+    <div data-grid-glow="" style="position:absolute; inset:0; pointer-events:none; z-index:1; background-image:linear-gradient(#B7C94A 1px,transparent 1px),linear-gradient(90deg,#B7C94A 1px,transparent 1px); background-size:88px 88px; opacity:0; transition:opacity .7s ease; -webkit-mask:radial-gradient(circle 300px at var(--mx,50%) var(--my,50%),#000 0%,rgba(0,0,0,.3) 46%,transparent 72%); mask:radial-gradient(circle 300px at var(--mx,50%) var(--my,50%),#000 0%,rgba(0,0,0,.3) 46%,transparent 72%); mix-blend-mode:screen;"></div>
+    <div data-cursor-light="" style="position:absolute; left:0; top:0; width:560px; height:560px; border-radius:50%; pointer-events:none; z-index:1; transform:translate(-50%,-50%); background:radial-gradient(circle, color-mix(in srgb, #B7C94A 22%, transparent) 0%, transparent 66%); opacity:0; transition:opacity .7s ease; filter:blur(6px); will-change:left,top;"></div>
     <!-- Right-side work collage, fading left→right into the black so the contents stay legible -->
-    <div data-hero-art aria-hidden="true" style="position:absolute; top:0; right:0; bottom:0; width:min(60%, 920px); z-index:0; overflow:hidden; pointer-events:none;">
-      <img src="assets/hero-works.png" data-parallax="0.16" style="position:absolute; right:0; top:-20%; width:100%; height:140%; object-fit:cover; object-position:center; display:block; opacity:.6; filter:saturate(.9) brightness(.92); will-change:transform;">
+    <div data-hero-art="" aria-hidden="true" style="position:absolute; top:0; right:0; bottom:0; width:min(60%, 920px); z-index:0; overflow:hidden; pointer-events:none;">
+      <img src="assets/hero-works.jpg" data-parallax="0.16" style="position:absolute; right:0; top:-20%; width:100%; height:140%; object-fit:cover; object-position:center; display:block; opacity:.6; filter:saturate(.9) brightness(.92); will-change:transform;">
       <div style="position:absolute; inset:0; background:linear-gradient(to right, #0A0A0B 0%, rgba(10,10,11,.96) 28%, rgba(10,10,11,.72) 52%, rgba(10,10,11,.42) 78%, rgba(10,10,11,.24) 100%);"></div>
       <div style="position:absolute; inset:0; background:linear-gradient(to bottom, #0A0A0B 0%, rgba(10,10,11,0) 15%, rgba(10,10,11,0) 84%, #0A0A0B 100%);"></div>
     </div>
@@ -151,13 +146,12 @@
       <div data-parallax="0.05" style="flex:1; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(40px,6vw,88px); align-items:center; padding:clamp(40px,7vw,80px) 0; will-change:transform;">
         <div style="flex:1.4;">
           <div data-reveal="0" style="display:inline-flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#B7C94A; margin-bottom:28px;">
-            <span style="width:30px; height:2px; background:#B7C94A; display:block;"></span>Short brochure · 2025
-          </div>
+            <span style="width: 30px; height: 2px; background: rgb(183, 201, 74); display: block;"></span>Short brochure · 2026</div>
           <h1 data-reveal="0.06" style="font-family:var(--font-display); font-weight:400; font-size:clamp(46px,5vw,72px); line-height:1.08; letter-spacing:0; margin:0; max-width:15ch; text-wrap:balance;">Make your project look as good as it <em style="font-style:normal; color:#B7C94A;">deserves.</em></h1>
           <p data-reveal="0.12" style="font-family:var(--font-sans); font-size:clamp(17px,1.6vw,21px); line-height:1.55; letter-spacing:0; margin:32px 0 0; color:#9A9AA4; max-width:46ch;">Design &amp; visual communication — scroll down for the short guide to how Deckhaus helps your business present, launch and grow.</p>
         </div>
 
-        <div data-reveal="0.16" style="position:relative; border-left:1px solid rgba(255,255,255,.14); padding:8px 0 8px clamp(28px,4vw,56px); background:linear-gradient(to right, rgba(10,10,11,.74) 0%, rgba(10,10,11,.44) 56%, rgba(10,10,11,0) 100%); display:flex; flex-direction:column; gap:6px;">
+        <div data-reveal="0.16" style="position:relative; border-left:1px solid rgba(255,255,255,.14); padding:8px 0 8px clamp(28px,4vw,56px); display:flex; flex-direction:column; gap:6px;">
           <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9A9AA4; margin-bottom:14px;">Inside this guide</span>
           <div data-jump="1" style="display:flex; align-items:baseline; gap:18px; padding:9px 0; cursor:pointer; transition:opacity .2s ease;" style-hover="opacity:.62"><span style="font-family:var(--font-mono); font-size:13px; color:#B7C94A;">02</span><span style="font-family:var(--font-display); font-size:22px;">What we do</span></div>
           <div data-jump="2" style="display:flex; align-items:baseline; gap:18px; padding:9px 0; cursor:pointer; transition:opacity .2s ease;" style-hover="opacity:.62"><span style="font-family:var(--font-mono); font-size:13px; color:#B7C94A;">03</span><span style="font-family:var(--font-display); font-size:22px;">Why it matters</span></div>
@@ -170,7 +164,7 @@
         </div>
       </div>
 
-      <div data-cue style="display:flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#9A9AA4;">
+      <div data-cue="" style="display:flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#9A9AA4;">
         <span style="display:block;">Scroll</span>
         <svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="#9A9AA4" stroke-width="1.4"><path d="M7 1 V20 M1 14 L7 20 L13 14"></path></svg>
       </div>
@@ -178,7 +172,7 @@
   </section>
 
   <!-- ═══════════ 02 — WHAT WE DO ═══════════ -->
-  <section data-sec data-theme="light" data-screen-label="02 What we do" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0 0; overflow:hidden;">
+  <section data-sec="" data-theme="light" data-screen-label="02 What we do" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0 0; overflow:hidden;">
     <div style="position:relative; width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(24px,6vw,80px); box-sizing:border-box;">
       <div data-reveal="0" style="display:inline-flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9EAD3F;">
         <span style="width:30px; height:2px; background:#9EAD3F; display:block;"></span>What we do
@@ -193,8 +187,8 @@
         <p style="font-family:var(--font-display); font-weight:400; font-size:clamp(22px,2.4vw,32px); line-height:1.2; letter-spacing:0; margin:0; color:#F4F4EF; max-width:30ch;">Communication that looks <em style="font-style:normal; color:#B7C94A;">clear, coherent and trustworthy.</em></p>
       </div>
     </div>
-    <div data-band style="position:relative; width:100%; height:clamp(380px,46vw,600px); margin-top:clamp(36px,4.5vw,68px); overflow:hidden;">
-      <img src="./pptsnew-mqm6z8ch.png" alt="A selection of presentation covers designed by Deckhaus" data-parallax="0.22" style="position:absolute; left:0; top:-30%; width:100%; height:160%; object-fit:cover; object-position:center 32%; display:block; will-change:transform;">
+    <div data-band="" style="position:relative; width:100%; height:clamp(380px,46vw,600px); margin-top:clamp(36px,4.5vw,68px); overflow:hidden;">
+      <img src="./pptsnew-mqm6z8ch.jpg" alt="A selection of presentation covers designed by Deckhaus" data-parallax="0.10" style="position:absolute; left:0; top:-25%; width:100%; height:150%; object-fit:cover; object-position:center 50%; display:block; will-change:transform;">
       <div style="position:absolute; inset:0; pointer-events:none; background:linear-gradient(to bottom, #F4F4EF 0%, rgba(244,244,239,.70) 12%, rgba(244,244,239,.04) 38%, rgba(244,244,239,0) 60%);"></div>
       <div style="position:absolute; left:0; right:0; bottom:0; height:46%; pointer-events:none; background:linear-gradient(to top, rgba(10,10,11,.58), rgba(10,10,11,0));"></div>
       <div style="position:absolute; left:0; right:0; bottom:0; padding:0 clamp(24px,6vw,80px) clamp(26px,3vw,44px); pointer-events:none;">
@@ -207,7 +201,7 @@
   </section>
 
   <!-- ═══════════ 03 — WHY IT MATTERS (From → To) ═══════════ -->
-  <section data-sec data-theme="dark" data-screen-label="03 Why it matters" style="position:relative; background:#0A0A0B; color:#F4F4EF; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
+  <section data-sec="" data-theme="dark" data-screen-label="03 Why it matters" style="position:relative; background:#0A0A0B; color:#F4F4EF; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
     <div data-parallax-grid="0.12" style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:88px 88px; pointer-events:none;"></div>
     <div style="position:relative; width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(24px,6vw,80px); box-sizing:border-box;">
       <div data-reveal="0" style="display:inline-flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#B7C94A;">
@@ -216,52 +210,67 @@
       <h2 data-reveal="0.06" style="font-family:var(--font-display); font-weight:400; font-size:clamp(30px,4.6vw,56px); line-height:1.07; letter-spacing:0; margin:24px 0 0; max-width:24ch; text-wrap:balance;">The way your business looks changes how it's <em style="font-style:normal; color:#B7C94A;">valued.</em></h2>
       <p data-reveal="0.12" style="font-size:clamp(16px,1.6vw,20px); line-height:1.5; letter-spacing:0; margin:18px 0 0; color:#9A9AA4; max-width:56ch;">Same business, same quality of work — but a coherent system makes it read as more professional and more worth trusting.</p>
 
-      <div style="display:grid; grid-template-columns:1fr auto 1fr; gap:clamp(20px,3vw,40px); align-items:stretch; margin-top:clamp(40px,5vw,60px);">
-        <!-- FROM -->
-        <div data-reveal="0" style="background:#0E0E10; border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:clamp(24px,3vw,38px); box-sizing:border-box; display:flex; flex-direction:column; overflow:hidden;">
-          <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9A9AA4;">From</span>
-          <div style="position:relative; flex:1; min-height:300px; margin:20px 0 16px;" data-scatter>
-            <div style="position:absolute; left:2%; top:20px; width:114px; height:144px; background:#1A1A1F; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:11px; box-sizing:border-box; display:flex; flex-direction:column; gap:7px; transform:rotate(-9deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
-              <div style="height:10px; width:60%; background:#9A9AA4; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:80%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:64%; background:rgba(255,255,255,.13); border-radius:2px;"></div>
-            </div>
-            <div style="position:absolute; left:30%; top:96px; width:104px; height:132px; background:#161619; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:10px; box-sizing:border-box; display:flex; flex-direction:column; gap:6px; transform:rotate(8deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
-              <div style="height:9px; width:44%; background:#C2C2CB; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.12); border-radius:2px;"></div><div style="height:4px; width:70%; background:rgba(255,255,255,.12); border-radius:2px;"></div>
-            </div>
-            <div style="position:absolute; left:50%; top:12px; width:126px; height:156px; background:#1C1C22; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:12px; box-sizing:border-box; display:flex; flex-direction:column; gap:7px; transform:rotate(-4deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
-              <div style="height:11px; width:72%; background:#6E6E78; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:88%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:60%; background:rgba(255,255,255,.13); border-radius:2px;"></div>
-            </div>
-            <div style="position:absolute; left:42%; top:178px; width:108px; height:130px; background:#19191e; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:10px; box-sizing:border-box; display:flex; flex-direction:column; gap:6px; transform:rotate(12deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
-              <div style="height:9px; width:54%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.12); border-radius:2px;"></div><div style="height:4px; width:74%; background:rgba(255,255,255,.12); border-radius:2px;"></div>
-            </div>
-            <div style="position:absolute; left:68%; top:114px; width:110px; height:138px; background:#161619; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:10px; box-sizing:border-box; display:flex; flex-direction:column; gap:6px; transform:rotate(-8deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
-              <div style="height:10px; width:50%; background:#9A9AA4; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:82%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:58%; background:rgba(255,255,255,.13); border-radius:2px;"></div>
-            </div>
-          </div>
-          <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.02em; color:#9A9AA4;">Disconnected pieces — no system.</span>
+      <!-- interactive From -> To reveal: drag the handle to align the pieces -->
+      <div data-fromto="" data-reveal="0.1" style="margin-top:clamp(36px,4.5vw,56px);">
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:14px;">
+          <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9A9AA4;">From — fragmented</span>
+          <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#B7C94A;">To — one system</span>
         </div>
 
-        <!-- arrow -->
-        <div style="display:flex; align-items:center; justify-content:center;"><span data-arrow style="display:inline-block; font-family:var(--font-display); font-size:clamp(32px,4vw,52px); color:#B7C94A;">→</span></div>
+        <div data-ft-stage="" style="position:relative; height:clamp(300px,40vw,420px); border:1px solid rgba(255,255,255,.10); border-radius:12px; overflow:hidden; background:#0C0C0E; touch-action:none; user-select:none; cursor:ew-resize;">
+          <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:44px 44px; pointer-events:none;"></div>
 
-        <!-- TO -->
-        <div data-reveal="0.1" style="background:#121214; border:1px solid rgba(255,255,255,.12); border-top:2px solid #B7C94A; border-radius:12px; padding:clamp(24px,3vw,38px); box-sizing:border-box; display:flex; flex-direction:column; overflow:hidden;">
-          <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#B7C94A;">To</span>
-          <div style="flex:1; min-height:300px; margin:20px 0 16px; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(2,1fr); gap:18px; align-content:center;" data-sync>
-            <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
-            <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
-            <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
-            <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
-            <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
-            <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
+          <!-- aligned layer (base): the "one system" view fills the stage -->
+          <div data-ft-sync="" style="position:absolute; inset:0; padding:clamp(20px,3vw,40px); box-sizing:border-box;">
+            <div data-sync="" style="width:100%; height:100%; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(2,1fr); gap:clamp(12px,1.6vw,20px); align-content:center;">
+              <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
+              <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
+              <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
+              <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
+              <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
+              <div style="background:#18181B; border:1px solid rgba(255,255,255,.10); border-radius:5px; padding:13px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px;"><div style="height:8px; width:52%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.14); border-radius:2px;"></div><div style="height:4px; width:66%; background:rgba(255,255,255,.14); border-radius:2px;"></div></div>
+            </div>
           </div>
-          <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.02em; color:#C2C2CB;">One system — everything aligned.</span>
+
+          <!-- fragmented layer (overlay): revealed from the left by the handle -->
+          <div data-ft-scatter="" style="position:absolute; inset:0; padding:clamp(20px,3vw,40px); box-sizing:border-box; background:#0C0C0E; clip-path:inset(0 58% 0 0);">
+            <div data-scatter="" style="position:relative; width:100%; height:100%;">
+              <div style="position:absolute; left:2%; top:20px; width:114px; height:144px; background:#1A1A1F; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:11px; box-sizing:border-box; display:flex; flex-direction:column; gap:7px; transform:rotate(-9deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
+                <div style="height:10px; width:60%; background:#9A9AA4; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:80%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:64%; background:rgba(255,255,255,.13); border-radius:2px;"></div>
+              </div>
+              <div style="position:absolute; left:30%; top:96px; width:104px; height:132px; background:#161619; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:10px; box-sizing:border-box; display:flex; flex-direction:column; gap:6px; transform:rotate(8deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
+                <div style="height:9px; width:44%; background:#C2C2CB; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.12); border-radius:2px;"></div><div style="height:4px; width:70%; background:rgba(255,255,255,.12); border-radius:2px;"></div>
+              </div>
+              <div style="position:absolute; left:50%; top:12px; width:126px; height:156px; background:#1C1C22; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:12px; box-sizing:border-box; display:flex; flex-direction:column; gap:7px; transform:rotate(-4deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
+                <div style="height:11px; width:72%; background:#6E6E78; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:88%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:60%; background:rgba(255,255,255,.13); border-radius:2px;"></div>
+              </div>
+              <div style="position:absolute; left:42%; top:178px; width:108px; height:130px; background:#19191e; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:10px; box-sizing:border-box; display:flex; flex-direction:column; gap:6px; transform:rotate(12deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
+                <div style="height:9px; width:54%; background:#B7C94A; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.12); border-radius:2px;"></div><div style="height:4px; width:74%; background:rgba(255,255,255,.12); border-radius:2px;"></div>
+              </div>
+              <div style="position:absolute; left:68%; top:114px; width:110px; height:138px; background:#161619; border:1px solid rgba(255,255,255,.12); border-radius:4px; padding:10px; box-sizing:border-box; display:flex; flex-direction:column; gap:6px; transform:rotate(-8deg); box-shadow:0 10px 24px rgba(0,0,0,.5);">
+                <div style="height:10px; width:50%; background:#9A9AA4; border-radius:2px;"></div><div style="height:4px; width:100%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:82%; background:rgba(255,255,255,.13); border-radius:2px;"></div><div style="height:4px; width:58%; background:rgba(255,255,255,.13); border-radius:2px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- divider + drag handle -->
+          <div data-ft-divider="" style="position:absolute; top:0; bottom:0; left:42%; width:2px; background:#B7C94A; pointer-events:none;">
+            <div data-ft-handle="" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:46px; height:46px; border-radius:50%; background:#B7C94A; box-shadow:0 5px 16px rgba(0,0,0,.45); display:flex; align-items:center; justify-content:center; cursor:ew-resize; pointer-events:auto;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A0A0B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5"></path><path d="M15 7l5 5-5 5"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:14px;">
+          <span data-ft-cap="" style="font-family:var(--font-mono); font-size:13px; letter-spacing:.02em; color:#9A9AA4;">Disconnected pieces — no system.</span>
+          <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#6E6E78;">Drag to align</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════ 04 — HOW WE CAN HELP ═══════════ -->
-  <section data-sec data-theme="light" data-screen-label="04 How we can help" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
+  <section data-sec="" data-theme="light" data-screen-label="04 How we can help" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
     <div style="position:relative; width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(24px,6vw,80px); box-sizing:border-box;">
       <div data-reveal="0" style="display:inline-flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9EAD3F;">
         <span style="width:30px; height:2px; background:#9EAD3F; display:block;"></span>How we can help
@@ -269,7 +278,7 @@
       <h2 data-reveal="0.06" style="font-family:var(--font-display); font-weight:400; font-size:clamp(32px,5vw,60px); line-height:1.05; letter-spacing:0; margin:24px 0 0;">Four ways we can help.</h2>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:26px; margin-top:clamp(36px,4vw,48px);">
 
-        <div data-reveal="0" data-tilt style="display:flex; flex-direction:column; background:#FFFFFF; border:1px solid rgba(10,10,11,.12); border-radius:12px; overflow:hidden;">
+        <div data-reveal="0" data-tilt="" style="display:flex; flex-direction:column; background:#FFFFFF; border:1px solid rgba(10,10,11,.12); border-radius:12px; overflow:hidden;">
           <div style="position:relative; height:190px; flex:none; border-bottom:1px solid rgba(10,10,11,.10); background-color:#FBFBF8; background-image:linear-gradient(rgba(10,10,11,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,10,11,.05) 1px,transparent 1px); background-size:24px 24px; display:flex; align-items:center; justify-content:center;">
             <svg viewBox="0 0 120 80" style="display:block; width:74%; max-width:230px; height:auto;">
               <rect x="8" y="8" width="46" height="28" rx="2" fill="#FFFFFF" stroke="rgba(10,10,11,.30)" stroke-width="1"></rect>
@@ -297,7 +306,7 @@
           </div>
         </div>
 
-        <div data-reveal="0.08" data-tilt style="display:flex; flex-direction:column; background:#FFFFFF; border:1px solid rgba(10,10,11,.12); border-radius:12px; overflow:hidden;">
+        <div data-reveal="0.08" data-tilt="" style="display:flex; flex-direction:column; background:#FFFFFF; border:1px solid rgba(10,10,11,.12); border-radius:12px; overflow:hidden;">
           <div style="position:relative; height:190px; flex:none; border-bottom:1px solid rgba(10,10,11,.10); background-color:#FBFBF8; background-image:linear-gradient(rgba(10,10,11,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,10,11,.05) 1px,transparent 1px); background-size:24px 24px; display:flex; align-items:center; justify-content:center;">
             <svg viewBox="0 0 120 80" style="display:block; width:74%; max-width:230px; height:auto;">
               <g fill="none" stroke="#9EAD3F" stroke-width="1.3">
@@ -316,7 +325,7 @@
           </div>
         </div>
 
-        <div data-reveal="0.16" data-tilt style="display:flex; flex-direction:column; background:#FFFFFF; border:1px solid rgba(10,10,11,.12); border-radius:12px; overflow:hidden;">
+        <div data-reveal="0.16" data-tilt="" style="display:flex; flex-direction:column; background:#FFFFFF; border:1px solid rgba(10,10,11,.12); border-radius:12px; overflow:hidden;">
           <div style="position:relative; height:190px; flex:none; border-bottom:1px solid rgba(10,10,11,.10); background-color:#FBFBF8; background-image:linear-gradient(rgba(10,10,11,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,10,11,.05) 1px,transparent 1px); background-size:24px 24px; display:flex; align-items:center; justify-content:center;">
             <svg viewBox="0 0 120 80" style="display:block; width:74%; max-width:230px; height:auto;">
               <rect x="16" y="8" width="88" height="48" rx="2" fill="#FFFFFF" stroke="rgba(10,10,11,.30)" stroke-width="1"></rect>
@@ -336,7 +345,7 @@
           </div>
         </div>
 
-        <div data-reveal="0.24" data-tilt style="display:flex; flex-direction:column; background:#FFFFFF; border:1px solid rgba(10,10,11,.12); border-radius:12px; overflow:hidden;">
+        <div data-reveal="0.24" data-tilt="" style="display:flex; flex-direction:column; background:#FFFFFF; border:1px solid rgba(10,10,11,.12); border-radius:12px; overflow:hidden;">
           <div style="position:relative; height:190px; flex:none; border-bottom:1px solid rgba(10,10,11,.10); background-color:#FBFBF8; background-image:linear-gradient(rgba(10,10,11,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,10,11,.05) 1px,transparent 1px); background-size:24px 24px; display:flex; align-items:center; justify-content:center;">
             <svg viewBox="0 0 120 80" style="display:block; width:74%; max-width:230px; height:auto;">
               <g fill="none" stroke="#9EAD3F" stroke-width="1.1" stroke-dasharray="3 4" style="animation:dh7dash 1.1s linear infinite;">
@@ -372,7 +381,7 @@
   </section>
 
   <!-- ═══════════ 05 — WHAT WE CREATE ═══════════ -->
-  <section data-sec data-theme="light" data-screen-label="05 What we create" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
+  <section data-sec="" data-theme="light" data-screen-label="05 What we create" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
     <div style="position:relative; width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(24px,6vw,80px); box-sizing:border-box;">
       <div data-reveal="0" style="display:inline-flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9EAD3F;">
         <span style="width:30px; height:2px; background:#9EAD3F; display:block;"></span>What we can create
@@ -381,12 +390,12 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:32px; margin:clamp(36px,4vw,48px) 0 0;">
 
         <div data-reveal="0" style="display:flex; flex-direction:column; gap:18px;">
-          <div data-slideshow style="position:relative; width:100%; height:clamp(220px,24vw,300px); flex:none;">
-            <img data-ss-img src="uploads/presentations_1-1782073312121.png" alt="Presentation designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:1;">
-            <img data-ss-img src="uploads/presentations_2-1782073314772.png" alt="Presentation designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
+          <div data-slideshow="" style="position:relative; width:100%; height:clamp(220px,24vw,300px); flex:none;">
+            <img data-ss-img="" src="uploads/presentations_1-1782073312121.jpg" alt="Presentation designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:1;">
+            <img data-ss-img="" src="uploads/presentations_2-1782073314772.jpg" alt="Presentation designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
             <div class="ss-dots" style="position:absolute; left:12px; bottom:12px; display:flex; gap:6px; z-index:3;">
-              <button data-dot type="button" aria-label="Show work 1" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:#9EAD3F;"></button>
-              <button data-dot type="button" aria-label="Show work 2" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
+              <button data-dot="" type="button" aria-label="Show work 1" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:#9EAD3F;"></button>
+              <button data-dot="" type="button" aria-label="Show work 2" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
             </div>
           </div>
           <div style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; color:#0A0A0B;">Presentations &amp; proposals</div>
@@ -394,14 +403,14 @@
         </div>
 
         <div data-reveal="0.08" style="display:flex; flex-direction:column; gap:18px;">
-          <div data-slideshow style="position:relative; width:100%; height:clamp(220px,24vw,300px); flex:none;">
-            <img data-ss-img src="uploads/print_1-1782073375685.png" alt="Printed piece designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:1;">
-            <img data-ss-img src="uploads/print_2-1782073382547.png" alt="Printed piece designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
-            <img data-ss-img src="uploads/print_3-1782073419234.png" alt="Printed piece designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
+          <div data-slideshow="" style="position:relative; width:100%; height:clamp(220px,24vw,300px); flex:none;">
+            <img data-ss-img="" src="uploads/print_1-1782073375685.jpg" alt="Printed piece designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:1;">
+            <img data-ss-img="" src="uploads/print_2-1782073382547.jpg" alt="Printed piece designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
+            <img data-ss-img="" src="uploads/print_3-1782073419234.jpg" alt="Printed piece designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
             <div class="ss-dots" style="position:absolute; left:12px; bottom:12px; display:flex; gap:6px; z-index:3;">
-              <button data-dot type="button" aria-label="Show work 1" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:#9EAD3F;"></button>
-              <button data-dot type="button" aria-label="Show work 2" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
-              <button data-dot type="button" aria-label="Show work 3" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
+              <button data-dot="" type="button" aria-label="Show work 1" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:#9EAD3F;"></button>
+              <button data-dot="" type="button" aria-label="Show work 2" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
+              <button data-dot="" type="button" aria-label="Show work 3" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
             </div>
           </div>
           <div style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; color:#0A0A0B;">Print &amp; physical materials</div>
@@ -409,12 +418,12 @@
         </div>
 
         <div data-reveal="0.16" style="display:flex; flex-direction:column; gap:18px;">
-          <div data-slideshow style="position:relative; width:100%; height:clamp(220px,24vw,300px); flex:none;">
-            <img data-ss-img src="uploads/social_1-1782073467142.png" alt="Social content designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:1;">
-            <img data-ss-img src="uploads/social_2-1782074037490.png" alt="Social content designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
+          <div data-slideshow="" style="position:relative; width:100%; height:clamp(220px,24vw,300px); flex:none;">
+            <img data-ss-img="" src="uploads/social_1-1782073467142.jpg" alt="Social content designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:1;">
+            <img data-ss-img="" src="uploads/social_2-1782074037490.jpg" alt="Social content designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
             <div class="ss-dots" style="position:absolute; left:12px; bottom:12px; display:flex; gap:6px; z-index:3;">
-              <button data-dot type="button" aria-label="Show work 1" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:#9EAD3F;"></button>
-              <button data-dot type="button" aria-label="Show work 2" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
+              <button data-dot="" type="button" aria-label="Show work 1" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:#9EAD3F;"></button>
+              <button data-dot="" type="button" aria-label="Show work 2" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
             </div>
           </div>
           <div style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; color:#0A0A0B;">Social &amp; campaign content</div>
@@ -422,14 +431,14 @@
         </div>
 
         <div data-reveal="0.24" style="display:flex; flex-direction:column; gap:18px;">
-          <div data-slideshow style="position:relative; width:100%; height:clamp(220px,24vw,300px); flex:none;">
-            <img data-ss-img src="uploads/events_1-1782073451132.png" alt="Event visual designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:1;">
-            <img data-ss-img src="uploads/events_2-1782073826451.png" alt="Event visual designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
-            <img data-ss-img src="uploads/events_3-1782073410175.png" alt="Event visual designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
+          <div data-slideshow="" style="position:relative; width:100%; height:clamp(220px,24vw,300px); flex:none;">
+            <img data-ss-img="" src="uploads/events_1-1782073451132.jpg" alt="Event visual designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:1;">
+            <img data-ss-img="" src="uploads/events_2-1782073826451.jpg" alt="Event visual designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
+            <img data-ss-img="" src="uploads/events_3-1782073410175.jpg" alt="Event visual designed by Deckhaus" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; border-radius:8px; border:1px solid rgba(10,10,11,.14); transition:opacity .7s ease; opacity:0;">
             <div class="ss-dots" style="position:absolute; left:12px; bottom:12px; display:flex; gap:6px; z-index:3;">
-              <button data-dot type="button" aria-label="Show work 1" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:#9EAD3F;"></button>
-              <button data-dot type="button" aria-label="Show work 2" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
-              <button data-dot type="button" aria-label="Show work 3" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
+              <button data-dot="" type="button" aria-label="Show work 1" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:#9EAD3F;"></button>
+              <button data-dot="" type="button" aria-label="Show work 2" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
+              <button data-dot="" type="button" aria-label="Show work 3" style="width:22px; height:4px; padding:0; border:0; border-radius:2px; cursor:pointer; background:rgba(10,10,11,.18);"></button>
             </div>
           </div>
           <div style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; color:#0A0A0B;">Event &amp; launch visuals</div>
@@ -441,33 +450,112 @@
   </section>
 
   <!-- ═══════════ 06 — HOW WE WORK ═══════════ -->
-  <section data-sec data-theme="light" data-screen-label="06 How we work" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
+  <section data-sec="" data-theme="light" data-screen-label="06 How we work" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
     <div style="position:relative; width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(24px,6vw,80px); box-sizing:border-box;">
       <div data-reveal="0" style="display:inline-flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9EAD3F;">
         <span style="width:30px; height:2px; background:#9EAD3F; display:block;"></span>How we work
       </div>
       <h2 data-reveal="0.06" style="font-family:var(--font-display); font-weight:400; font-size:clamp(32px,5vw,60px); line-height:1.05; letter-spacing:0; margin:24px 0 0; max-width:20ch;">Enhanced by AI. Defined by us.</h2>
 
-      <div data-stepper data-reveal="0.1" style="margin-top:clamp(40px,5vw,56px);">
-        <div data-step-nums style="display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(16px,3vw,48px);">
-          <div data-step-num style="font-family:var(--font-display); font-weight:400; font-size:clamp(44px,6vw,84px); line-height:1; letter-spacing:0; color:#9EAD3F; transition:color .45s ease;">01</div>
-          <div data-step-num style="font-family:var(--font-display); font-weight:400; font-size:clamp(44px,6vw,84px); line-height:1; letter-spacing:0; color:#0A0A0B; transition:color .45s ease;">02</div>
-          <div data-step-num style="font-family:var(--font-display); font-weight:400; font-size:clamp(44px,6vw,84px); line-height:1; letter-spacing:0; color:#0A0A0B; transition:color .45s ease;">03</div>
-          <div data-step-num style="font-family:var(--font-display); font-weight:400; font-size:clamp(44px,6vw,84px); line-height:1; letter-spacing:0; color:#0A0A0B; transition:color .45s ease;">04</div>
+      <div data-stepper="" data-reveal="0.1" style="margin-top:clamp(40px,5vw,56px);">
+        <div data-step-nums="" style="display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(16px,3vw,48px);">
+          <div data-step-num="" style="font-family:var(--font-display); font-weight:400; font-size:clamp(44px,6vw,84px); line-height:1; letter-spacing:0; color:#9EAD3F; transition:color .45s ease;">01</div>
+          <div data-step-num="" style="font-family:var(--font-display); font-weight:400; font-size:clamp(44px,6vw,84px); line-height:1; letter-spacing:0; color:#0A0A0B; transition:color .45s ease;">02</div>
+          <div data-step-num="" style="font-family:var(--font-display); font-weight:400; font-size:clamp(44px,6vw,84px); line-height:1; letter-spacing:0; color:#0A0A0B; transition:color .45s ease;">03</div>
+          <div data-step-num="" style="font-family:var(--font-display); font-weight:400; font-size:clamp(44px,6vw,84px); line-height:1; letter-spacing:0; color:#0A0A0B; transition:color .45s ease;">04</div>
         </div>
-        <div data-step-track style="position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(16px,3vw,48px); align-items:center; height:24px; margin:22px 0 28px;">
+        <div data-step-track="" style="position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(16px,3vw,48px); align-items:center; height:24px; margin:22px 0 28px;">
           <div style="position:absolute; left:8px; right:8px; top:50%; height:1px; background:rgba(10,10,11,.18);"></div>
-          <span data-step-dot style="position:relative; width:12px; height:12px; border-radius:50%; background:#F4F4EF; border:1.5px solid rgba(10,10,11,.28); justify-self:start; z-index:1;"></span>
-          <span data-step-dot style="position:relative; width:12px; height:12px; border-radius:50%; background:#F4F4EF; border:1.5px solid rgba(10,10,11,.28); justify-self:start; z-index:1;"></span>
-          <span data-step-dot style="position:relative; width:12px; height:12px; border-radius:50%; background:#F4F4EF; border:1.5px solid rgba(10,10,11,.28); justify-self:start; z-index:1;"></span>
-          <span data-step-dot style="position:relative; width:12px; height:12px; border-radius:50%; background:#F4F4EF; border:1.5px solid rgba(10,10,11,.28); justify-self:start; z-index:1;"></span>
-          <span data-step-ball style="position:absolute; top:50%; left:0; width:20px; height:20px; border-radius:50%; background:#9EAD3F; box-shadow:0 3px 10px rgba(158,173,63,.5); transform:translateY(-50%); transition:left .6s cubic-bezier(.16,1,.3,1); z-index:2;"></span>
+          <span data-step-dot="" style="position:relative; width:12px; height:12px; border-radius:50%; background:#F4F4EF; border:1.5px solid rgba(10,10,11,.28); justify-self:start; z-index:1;"></span>
+          <span data-step-dot="" style="position:relative; width:12px; height:12px; border-radius:50%; background:#F4F4EF; border:1.5px solid rgba(10,10,11,.28); justify-self:start; z-index:1;"></span>
+          <span data-step-dot="" style="position:relative; width:12px; height:12px; border-radius:50%; background:#F4F4EF; border:1.5px solid rgba(10,10,11,.28); justify-self:start; z-index:1;"></span>
+          <span data-step-dot="" style="position:relative; width:12px; height:12px; border-radius:50%; background:#F4F4EF; border:1.5px solid rgba(10,10,11,.28); justify-self:start; z-index:1;"></span>
+          <span data-step-ball="" style="position:absolute; top:50%; left:0; width:20px; height:20px; border-radius:50%; background:#9EAD3F; box-shadow:0 3px 10px rgba(158,173,63,.5); transform:translateY(-50%); transition:left .6s cubic-bezier(.16,1,.3,1); z-index:2;"></span>
         </div>
-        <div data-step-cards style="display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(16px,3vw,48px);">
-          <div><span data-step-inline style="display:none; font-family:var(--font-mono); font-size:14px; letter-spacing:.1em; color:#9EAD3F; margin-bottom:10px;">01</span><h3 style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; margin:0 0 12px;">Understand</h3><p style="font-size:16px; line-height:1.5; letter-spacing:0; margin:0; color:#5C5C64; max-width:24ch;">We learn what you need to say, who it's for and what the goal is.</p></div>
-          <div><span data-step-inline style="display:none; font-family:var(--font-mono); font-size:14px; letter-spacing:.1em; color:#9EAD3F; margin-bottom:10px;">02</span><h3 style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; margin:0 0 12px; color:#0A0A0B;">Explore <span style="color:#9EAD3F;">with AI</span></h3><p style="font-size:16px; line-height:1.5; letter-spacing:0; margin:0; color:#5C5C64; max-width:24ch;">We use AI to explore directions fast — testing tone and style before we commit.</p></div>
-          <div><span data-step-inline style="display:none; font-family:var(--font-mono); font-size:14px; letter-spacing:.1em; color:#9EAD3F; margin-bottom:10px;">03</span><h3 style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; margin:0 0 12px;">Refine &amp; craft</h3><p style="font-size:16px; line-height:1.5; letter-spacing:0; margin:0; color:#5C5C64; max-width:24ch;">We pick the strongest direction and craft it by hand. AI inspires; we define.</p></div>
-          <div><span data-step-inline style="display:none; font-family:var(--font-mono); font-size:14px; letter-spacing:.1em; color:#9EAD3F; margin-bottom:10px;">04</span><h3 style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; margin:0 0 12px;">Deliver</h3><p style="font-size:16px; line-height:1.5; letter-spacing:0; margin:0; color:#5C5C64; max-width:24ch;">Final files ready to print, send, publish or reuse.</p></div>
+        <div data-step-cards="" style="display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(16px,3vw,48px);">
+          <div><span data-step-inline="" style="display:none; font-family:var(--font-mono); font-size:14px; letter-spacing:.1em; color:#9EAD3F; margin-bottom:10px;">01</span><h3 style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; margin:0 0 12px;">Understand</h3><p style="font-size:16px; line-height:1.5; letter-spacing:0; margin:0; color:#5C5C64; max-width:24ch;">We learn what you need to say, who it's for and what the goal is.</p></div>
+          <div><span data-step-inline="" style="display:none; font-family:var(--font-mono); font-size:14px; letter-spacing:.1em; color:#9EAD3F; margin-bottom:10px;">02</span><h3 style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; margin:0 0 12px; color:#0A0A0B;">Explore <span style="color:#9EAD3F;">with AI</span></h3><p style="font-size:16px; line-height:1.5; letter-spacing:0; margin:0; color:#5C5C64; max-width:24ch;">We use AI to explore directions fast — testing tone and style before we commit.</p></div>
+          <div><span data-step-inline="" style="display:none; font-family:var(--font-mono); font-size:14px; letter-spacing:.1em; color:#9EAD3F; margin-bottom:10px;">03</span><h3 style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; margin:0 0 12px;">Refine &amp; craft</h3><p style="font-size:16px; line-height:1.5; letter-spacing:0; margin:0; color:#5C5C64; max-width:24ch;">We pick the strongest direction and craft it by hand. AI inspires; we define.</p></div>
+          <div><span data-step-inline="" style="display:none; font-family:var(--font-mono); font-size:14px; letter-spacing:.1em; color:#9EAD3F; margin-bottom:10px;">04</span><h3 style="font-family:var(--font-sans); font-weight:700; font-size:20px; line-height:1.2; letter-spacing:0; margin:0 0 12px;">Deliver</h3><p style="font-size:16px; line-height:1.5; letter-spacing:0; margin:0; color:#5C5C64; max-width:24ch;">Final files ready to print, send, publish or reuse.</p></div>
+        </div>
+      </div>
+
+      <!-- Direction Room — the Visual Sprint selection moment: pick a route, lock the direction -->
+      <div data-droom="" data-reveal="0.1" style="margin-top:clamp(40px,5vw,56px);">
+        <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:10px 24px;">
+          <div style="display:inline-flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9EAD3F;">
+            <span style="width:30px; height:2px; background:#9EAD3F; display:block;"></span>Direction Room
+          </div>
+          <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#9A9AA4;">Alignment before execution</span>
+        </div>
+        <p style="font-size:clamp(16px,1.6vw,20px); line-height:1.5; letter-spacing:0; margin:16px 0 0; color:#5C5C64; max-width:60ch;">Three routes, explored with AI. <span style="color:#0A0A0B;">You choose the direction</span> — then we craft it. Tap any route to reveal it.</p>
+
+        <div data-droom-grid="" style="display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2.5vw,28px); margin-top:clamp(28px,3.5vw,40px);">
+          <!-- Route 01 — Editorial -->
+          <button type="button" data-route="0" data-droom-card="" style="display:flex; flex-direction:column; text-align:left; padding:0; background:#FFFFFF; border:1px solid rgba(10,10,11,.14); border-radius:10px; overflow:hidden; cursor:pointer; font-family:inherit; transition:border-color .25s ease, box-shadow .25s ease, opacity .25s ease, transform .25s ease, filter .25s ease;">
+            <div style="position:relative; height:clamp(124px,15vw,164px); background:#F4F4EF; box-sizing:border-box; padding:clamp(14px,1.6vw,20px); display:flex; flex-direction:column; gap:9px; overflow:hidden;">
+              <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(10,10,11,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,10,11,.05) 1px,transparent 1px); background-size:22px 22px; pointer-events:none;"></div>
+              <span style="position:relative; font-family:var(--font-mono); font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:#9A9AA4;">deckhaus</span>
+              <span style="position:relative; font-family:var(--font-display); font-weight:400; font-size:clamp(34px,4.4vw,52px); line-height:.9; color:#0A0A0B;">Aa</span>
+              <div style="position:relative; display:flex; flex-direction:column; gap:5px; margin-top:auto;"><span style="height:3px; width:74%; background:rgba(10,10,11,.22); border-radius:2px;"></span><span style="height:3px; width:54%; background:rgba(10,10,11,.16); border-radius:2px;"></span></div>
+              <span data-droom-check="" style="position:absolute; top:10px; right:10px; width:24px; height:24px; border-radius:50%; background:#B7C94A; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(.6); transition:opacity .25s ease, transform .25s ease;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0A0A0B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></span>
+              <span data-droom-lid="" style="position:absolute; inset:0; z-index:3; background:#0A0A0B; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:11px; cursor:pointer; overflow:hidden; transition:opacity .45s cubic-bezier(.22,.61,.36,1), transform .45s cubic-bezier(.22,.61,.36,1);">
+                <span aria-hidden="true" style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:22px 22px; pointer-events:none;"></span>
+                <span aria-hidden="true" style="position:absolute; right:13px; bottom:0; font-family:var(--font-display); font-weight:400; font-size:clamp(54px,8vw,90px); line-height:1; color:rgba(244,244,239,.07);">01</span>
+                <span data-droom-reveal="" style="position:relative; display:inline-flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#0A0A0B; background:#B7C94A; padding:9px 15px; border-radius:999px; transition:transform .25s ease;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Reveal</span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:rgba(244,244,239,.45);">Tap to preview</span>
+              </span>
+            </div>
+            <div style="padding:15px 18px; display:flex; align-items:baseline; justify-content:space-between; gap:10px; border-top:1px solid rgba(10,10,11,.1);">
+              <span style="font-family:var(--font-sans); font-weight:700; font-size:17px; letter-spacing:0; color:#0A0A0B;">Editorial</span>
+              <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; color:#9A9AA4;">Route 01</span>
+            </div>
+          </button>
+
+          <!-- Route 02 — Bold -->
+          <button type="button" data-route="1" data-droom-card="" style="display:flex; flex-direction:column; text-align:left; padding:0; background:#FFFFFF; border:1px solid rgba(10,10,11,.14); border-radius:10px; overflow:hidden; cursor:pointer; font-family:inherit; transition:border-color .25s ease, box-shadow .25s ease, opacity .25s ease, transform .25s ease, filter .25s ease;">
+            <div style="position:relative; height:clamp(124px,15vw,164px); background:#0A0A0B; box-sizing:border-box; overflow:hidden; display:flex; flex-direction:column;">
+              <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px); background-size:22px 22px; pointer-events:none;"></div>
+              <div style="position:relative; height:46%; background:#B7C94A;"></div>
+              <div style="position:relative; flex:1; display:flex; align-items:center; padding:0 clamp(14px,1.6vw,20px);"><span style="font-family:var(--font-display); font-weight:400; font-size:clamp(38px,5vw,58px); line-height:.85; color:#F4F4EF;">Aa</span></div>
+              <span data-droom-check="" style="position:absolute; top:10px; right:10px; width:24px; height:24px; border-radius:50%; background:#B7C94A; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(.6); transition:opacity .25s ease, transform .25s ease;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0A0A0B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></span>
+              <span data-droom-lid="" style="position:absolute; inset:0; z-index:3; background:#0A0A0B; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:11px; cursor:pointer; overflow:hidden; transition:opacity .45s cubic-bezier(.22,.61,.36,1), transform .45s cubic-bezier(.22,.61,.36,1);">
+                <span aria-hidden="true" style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:22px 22px; pointer-events:none;"></span>
+                <span aria-hidden="true" style="position:absolute; right:13px; bottom:0; font-family:var(--font-display); font-weight:400; font-size:clamp(54px,8vw,90px); line-height:1; color:rgba(244,244,239,.07);">02</span>
+                <span data-droom-reveal="" style="position:relative; display:inline-flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#0A0A0B; background:#B7C94A; padding:9px 15px; border-radius:999px; transition:transform .25s ease;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Reveal</span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:rgba(244,244,239,.45);">Tap to preview</span>
+              </span>
+            </div>
+            <div style="padding:15px 18px; display:flex; align-items:baseline; justify-content:space-between; gap:10px; border-top:1px solid rgba(10,10,11,.1);">
+              <span style="font-family:var(--font-sans); font-weight:700; font-size:17px; letter-spacing:0; color:#0A0A0B;">Bold</span>
+              <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; color:#9A9AA4;">Route 02</span>
+            </div>
+          </button>
+
+          <!-- Route 03 — Minimal -->
+          <button type="button" data-route="2" data-droom-card="" style="display:flex; flex-direction:column; text-align:left; padding:0; background:#FFFFFF; border:1px solid rgba(10,10,11,.14); border-radius:10px; overflow:hidden; cursor:pointer; font-family:inherit; transition:border-color .25s ease, box-shadow .25s ease, opacity .25s ease, transform .25s ease, filter .25s ease;">
+            <div style="position:relative; height:clamp(124px,15vw,164px); background:#FFFFFF; box-sizing:border-box; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
+              <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(10,10,11,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(10,10,11,.04) 1px,transparent 1px); background-size:22px 22px; pointer-events:none;"></div>
+              <img src="assets/deckhaus-mark-black.svg" alt="" aria-hidden="true" style="position:relative; height:clamp(26px,3.4vw,38px); width:auto; display:block; opacity:.9;">
+              <span style="position:relative; height:3px; width:46px; background:#9EAD3F; border-radius:2px;"></span>
+              <span data-droom-check="" style="position:absolute; top:10px; right:10px; width:24px; height:24px; border-radius:50%; background:#B7C94A; display:flex; align-items:center; justify-content:center; opacity:0; transform:scale(.6); transition:opacity .25s ease, transform .25s ease;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0A0A0B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></span>
+              <span data-droom-lid="" style="position:absolute; inset:0; z-index:3; background:#0A0A0B; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:11px; cursor:pointer; overflow:hidden; transition:opacity .45s cubic-bezier(.22,.61,.36,1), transform .45s cubic-bezier(.22,.61,.36,1);">
+                <span aria-hidden="true" style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:22px 22px; pointer-events:none;"></span>
+                <span aria-hidden="true" style="position:absolute; right:13px; bottom:0; font-family:var(--font-display); font-weight:400; font-size:clamp(54px,8vw,90px); line-height:1; color:rgba(244,244,239,.07);">03</span>
+                <span data-droom-reveal="" style="position:relative; display:inline-flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#0A0A0B; background:#B7C94A; padding:9px 15px; border-radius:999px; transition:transform .25s ease;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Reveal</span>
+                <span style="position:relative; font-family:var(--font-mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:rgba(244,244,239,.45);">Tap to preview</span>
+              </span>
+            </div>
+            <div style="padding:15px 18px; display:flex; align-items:baseline; justify-content:space-between; gap:10px; border-top:1px solid rgba(10,10,11,.1);">
+              <span style="font-family:var(--font-sans); font-weight:700; font-size:17px; letter-spacing:0; color:#0A0A0B;">Minimal</span>
+              <span style="font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; color:#9A9AA4;">Route 03</span>
+            </div>
+          </button>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:14px; margin-top:clamp(22px,3vw,30px);">
+          <span data-droom-dot="" style="width:10px; height:10px; border-radius:50%; background:rgba(10,10,11,.25); flex:none; transition:background .3s ease;"></span>
+          <span data-droom-status="" style="font-family:var(--font-mono); font-size:14px; letter-spacing:.04em; color:#5C5C64;">Tap a route to reveal the direction.</span>
         </div>
       </div>
 
@@ -514,7 +602,7 @@
   </section>
 
   <!-- ═══════════ 07 — ONE CONNECTED SYSTEM ═══════════ -->
-  <section data-sec data-theme="light" data-screen-label="07 One system" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
+  <section data-sec="" data-theme="light" data-screen-label="07 One system" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
     <div style="position:relative; width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(24px,6vw,80px); box-sizing:border-box;">
       <div data-reveal="0" style="display:inline-flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9EAD3F;">
         <span style="width:30px; height:2px; background:#9EAD3F; display:block;"></span>The idea
@@ -552,7 +640,7 @@
             <span style="display:flex; align-items:center; gap:12px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#B7C94A;"><span style="width:24px; height:2px; background:#B7C94A; display:block;"></span>Visual system</span>
             <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#6E6E78;">Fig. 01</span>
           </div>
-          <svg data-figure viewBox="0 0 200 150" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="position:relative; display:block; flex:1; min-height:0; margin:6px 0;">
+          <svg data-figure="" viewBox="0 0 200 150" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="position:relative; display:block; flex:1; min-height:0; margin:6px 0;">
             <defs>
               <radialGradient id="vsGlow" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stop-color="#B7C94A" stop-opacity=".30"></stop>
@@ -665,7 +753,7 @@
   </section>
 
   <!-- ═══════════ 08 — CASE STUDY ═══════════ -->
-  <section data-sec data-theme="dark" data-screen-label="08 Case study" style="position:relative; background:#0A0A0B; color:#F4F4EF; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
+  <section data-sec="" data-theme="dark" data-screen-label="08 Case study" style="position:relative; background:#0A0A0B; color:#F4F4EF; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
     <div data-parallax-grid="0.12" style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:88px 88px; pointer-events:none;"></div>
     <div style="position:relative; width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(24px,6vw,80px); box-sizing:border-box;">
       <div data-reveal="0" style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:16px;">
@@ -677,7 +765,7 @@
       <h2 data-reveal="0.06" style="font-family:var(--font-display); font-weight:400; font-size:clamp(30px,4.4vw,54px); line-height:1.06; letter-spacing:0; margin:24px 0 0; max-width:26ch; text-wrap:balance;">From scattered launch pieces to one campaign that moves as <em style="font-style:normal; color:#B7C94A;">one.</em></h2>
 
       <div data-reveal="0" style="margin-top:clamp(30px,3.5vw,42px);">
-        <img src="assets/case-lacoste.png" alt="Lacoste Experience Ceremony — campaign visual system designed by Deckhaus" style="width:100%; height:auto; display:block; border:1px solid rgba(255,255,255,.14); border-radius:10px;">
+        <img src="assets/case-lacoste.jpg" alt="Lacoste Experience Ceremony — campaign visual system designed by Deckhaus" style="width:100%; height:auto; display:block; border:1px solid rgba(255,255,255,.14); border-radius:10px;">
         <div style="display:flex; align-items:center; gap:14px; margin-top:16px;">
           <span style="width:24px; height:2px; background:#B7C94A; display:block; flex:none;"></span>
           <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.04em; color:#6E6E78;">Lacoste · Experience Ceremony — campaign visual system · 2025</span>
@@ -702,6 +790,29 @@
         </div>
       </div>
 
+      <div data-reveal="0.1" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:clamp(20px,3vw,48px); margin-top:clamp(36px,4vw,52px); padding-top:clamp(28px,3vw,40px); border-top:1px solid rgba(255,255,255,.14);">
+        <div>
+          <div style="display:flex; align-items:baseline;">
+            <span style="font-family:var(--font-display); font-weight:400; font-size:clamp(46px,5.5vw,76px); line-height:.9; letter-spacing:0; color:#B7C94A;">+</span>
+            <span data-count="38" style="font-family:var(--font-display); font-weight:400; font-size:clamp(46px,5.5vw,76px); line-height:.9; letter-spacing:0; color:#F4F4EF;">38</span>
+            <span style="font-family:var(--font-display); font-weight:400; font-size:clamp(46px,5.5vw,76px); line-height:.9; letter-spacing:0; color:#B7C94A;">%</span>
+          </div>
+          <span style="display:block; font-family:var(--font-mono); font-size:13px; letter-spacing:.04em; color:#9A9AA4; margin-top:14px; max-width:22ch;">engagement vs. the previous launch</span>
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline;">
+            <span data-count="4" style="font-family:var(--font-display); font-weight:400; font-size:clamp(46px,5.5vw,76px); line-height:.9; letter-spacing:0; color:#F4F4EF;">4</span>
+          </div>
+          <span style="display:block; font-family:var(--font-mono); font-size:13px; letter-spacing:.04em; color:#9A9AA4; margin-top:14px; max-width:22ch;">surfaces unified — stage, screens, social, print</span>
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline;">
+            <span data-count="1" style="font-family:var(--font-display); font-weight:400; font-size:clamp(46px,5.5vw,76px); line-height:.9; letter-spacing:0; color:#F4F4EF;">1</span>
+          </div>
+          <span style="display:block; font-family:var(--font-mono); font-size:13px; letter-spacing:.04em; color:#9A9AA4; margin-top:14px; max-width:22ch;">visual system, end to end</span>
+        </div>
+      </div>
+
       <div data-reveal="0" style="display:flex; flex-wrap:wrap; align-items:baseline; gap:14px 32px; margin-top:clamp(32px,4vw,48px); padding-top:clamp(28px,3vw,40px); border-top:1px solid rgba(255,255,255,.14);">
         <p style="font-family:var(--font-display); font-weight:400; font-size:clamp(24px,3vw,38px); line-height:1.25; letter-spacing:0; margin:0; color:#F4F4EF; max-width:34ch;"><span style="color:#B7C94A;">“</span>The whole campaign finally moved as one brand.<span style="color:#B7C94A;">”</span></p>
         <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.04em; color:#9A9AA4;">Lacoste · Brand &amp; Events</span>
@@ -710,7 +821,7 @@
   </section>
 
   <!-- ═══════════ 09 — LET'S WORK TOGETHER ═══════════ -->
-  <section data-sec data-theme="light" data-screen-label="09 Let's work together" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
+  <section data-sec="" data-theme="light" data-screen-label="09 Let's work together" style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(40px,5vw,76px) 0; overflow:hidden;">
     <img src="assets/deckhaus-mark-black.svg" data-parallax="0.14" style="position:absolute; right:-80px; bottom:-110px; height:clamp(320px,40vw,500px); opacity:.55; filter:invert(0.78); pointer-events:none; will-change:transform;" alt="">
     <div style="position:relative; width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(24px,6vw,80px); box-sizing:border-box;">
       <div data-reveal="0" style="display:flex; align-items:center; gap:14px; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9EAD3F; margin-bottom:24px;">
@@ -719,7 +830,7 @@
       <h2 data-reveal="0.06" style="font-family:var(--font-display); font-weight:400; font-size:clamp(30px,4.4vw,54px); line-height:1.07; letter-spacing:0; margin:0; max-width:24ch; text-wrap:balance;">Tell us what you need to communicate. We'll make it clear, coherent and <em style="font-style:normal; color:#9EAD3F;">ready to show.</em></h2>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:clamp(40px,7vw,96px); align-items:start; margin-top:clamp(40px,5vw,56px);">
-        <div data-brief data-reveal="0.1" style="position:relative; background:#0A0A0B; border:1px solid rgba(255,255,255,.12); border-radius:14px; box-shadow:0 22px 60px rgba(10,10,11,.22); padding:clamp(26px,3vw,38px); overflow:hidden;">
+        <div data-brief="" data-reveal="0.1" style="position:relative; background:#0A0A0B; border:1px solid rgba(255,255,255,.12); border-radius:14px; box-shadow:0 22px 60px rgba(10,10,11,.22); padding:clamp(26px,3vw,38px); overflow:hidden;">
           <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px); background-size:44px 44px; pointer-events:none;"></div>
           <div style="position:relative; display:flex; flex-direction:column; gap:24px;">
 
@@ -730,25 +841,25 @@
                 </div>
                 <p style="font-family:var(--font-sans); font-size:16px; line-height:1.5; letter-spacing:0; margin:12px 0 0; color:#9A9AA4; max-width:36ch;">A quick three-step game. Tap your way through — we write the email for you.</p>
               </div>
-              <span data-brief-step style="font-family:var(--font-mono); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#6E6E78; white-space:nowrap; flex:none; padding-top:2px;">Step 01 / 03</span>
+              <span data-brief-step="" style="font-family:var(--font-mono); font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#6E6E78; white-space:nowrap; flex:none; padding-top:2px;">Step 01 / 03</span>
             </div>
 
             <!-- machine illustration: three brand cells that light up as steps complete -->
             <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px;">
-              <div data-machine-cell style="position:relative; height:54px; border:1px solid rgba(255,255,255,.14); border-radius:6px; background:#141417; overflow:hidden; transition:border-color .4s ease, background .4s ease;">
-                <span data-cell-bar style="position:absolute; left:0; top:0; height:4px; width:100%; background:rgba(255,255,255,.16); transition:background .4s ease;"></span>
-                <span data-cell-fill style="position:absolute; left:10px; bottom:9px; width:0%; height:5px; border-radius:3px; background:#B7C94A; transition:width .5s cubic-bezier(.16,1,.3,1);"></span>
-                <span data-cell-no style="position:absolute; left:10px; top:9px; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; color:#6E6E78; transition:color .4s ease;">01</span>
+              <div data-machine-cell="" style="position:relative; height:54px; border:1px solid rgba(255,255,255,.14); border-radius:6px; background:#141417; overflow:hidden; transition:border-color .4s ease, background .4s ease;">
+                <span data-cell-bar="" style="position:absolute; left:0; top:0; height:4px; width:100%; background:rgba(255,255,255,.16); transition:background .4s ease;"></span>
+                <span data-cell-fill="" style="position:absolute; left:10px; bottom:9px; width:0%; height:5px; border-radius:3px; background:#B7C94A; transition:width .5s cubic-bezier(.16,1,.3,1);"></span>
+                <span data-cell-no="" style="position:absolute; left:10px; top:9px; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; color:#6E6E78; transition:color .4s ease;">01</span>
               </div>
-              <div data-machine-cell style="position:relative; height:54px; border:1px solid rgba(255,255,255,.14); border-radius:6px; background:#141417; overflow:hidden; transition:border-color .4s ease, background .4s ease;">
-                <span data-cell-bar style="position:absolute; left:0; top:0; height:4px; width:100%; background:rgba(255,255,255,.16); transition:background .4s ease;"></span>
-                <span data-cell-fill style="position:absolute; left:10px; bottom:9px; width:0%; height:5px; border-radius:3px; background:#B7C94A; transition:width .5s cubic-bezier(.16,1,.3,1);"></span>
-                <span data-cell-no style="position:absolute; left:10px; top:9px; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; color:#6E6E78; transition:color .4s ease;">02</span>
+              <div data-machine-cell="" style="position:relative; height:54px; border:1px solid rgba(255,255,255,.14); border-radius:6px; background:#141417; overflow:hidden; transition:border-color .4s ease, background .4s ease;">
+                <span data-cell-bar="" style="position:absolute; left:0; top:0; height:4px; width:100%; background:rgba(255,255,255,.16); transition:background .4s ease;"></span>
+                <span data-cell-fill="" style="position:absolute; left:10px; bottom:9px; width:0%; height:5px; border-radius:3px; background:#B7C94A; transition:width .5s cubic-bezier(.16,1,.3,1);"></span>
+                <span data-cell-no="" style="position:absolute; left:10px; top:9px; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; color:#6E6E78; transition:color .4s ease;">02</span>
               </div>
-              <div data-machine-cell style="position:relative; height:54px; border:1px solid rgba(255,255,255,.14); border-radius:6px; background:#141417; overflow:hidden; transition:border-color .4s ease, background .4s ease;">
-                <span data-cell-bar style="position:absolute; left:0; top:0; height:4px; width:100%; background:rgba(255,255,255,.16); transition:background .4s ease;"></span>
-                <span data-cell-fill style="position:absolute; left:10px; bottom:9px; width:0%; height:5px; border-radius:3px; background:#B7C94A; transition:width .5s cubic-bezier(.16,1,.3,1);"></span>
-                <span data-cell-no style="position:absolute; left:10px; top:9px; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; color:#6E6E78; transition:color .4s ease;">03</span>
+              <div data-machine-cell="" style="position:relative; height:54px; border:1px solid rgba(255,255,255,.14); border-radius:6px; background:#141417; overflow:hidden; transition:border-color .4s ease, background .4s ease;">
+                <span data-cell-bar="" style="position:absolute; left:0; top:0; height:4px; width:100%; background:rgba(255,255,255,.16); transition:background .4s ease;"></span>
+                <span data-cell-fill="" style="position:absolute; left:10px; bottom:9px; width:0%; height:5px; border-radius:3px; background:#B7C94A; transition:width .5s cubic-bezier(.16,1,.3,1);"></span>
+                <span data-cell-no="" style="position:absolute; left:10px; top:9px; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; color:#6E6E78; transition:color .4s ease;">03</span>
               </div>
             </div>
 
@@ -764,7 +875,7 @@
             </div>
 
             <!-- STEP 2 (locked until step 1) -->
-            <div data-brief-panel="2" style="display:flex; flex-direction:column; gap:12px; opacity:0; transform:translateY(10px); max-height:0; overflow:hidden; pointer-events:none; transition:opacity .5s ease, transform .5s ease, max-height .5s ease;">
+            <div data-brief-panel="2" style="display:none; flex-direction:column; gap:12px; opacity:0; transform:translateY(10px); max-height:0; overflow:hidden; pointer-events:none; transition:opacity .5s ease, transform .5s ease, max-height .5s ease;">
               <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9A9AA4;">02 — The moment</span>
               <div data-brief-group="moment" style="display:flex; flex-wrap:wrap; gap:10px;">
                 <button type="button" data-chip="a pitch" style="font-family:var(--font-sans); font-size:16px; line-height:1.2; letter-spacing:0; color:#C2C2CB; background:#18181B; border:1px solid rgba(255,255,255,.16); border-radius:8px; padding:11px 15px; cursor:pointer; transition:border-color .18s ease, background .18s ease, color .18s ease, transform .18s ease;" style-hover="border-color:rgba(255,255,255,.42)">A pitch</button>
@@ -777,7 +888,7 @@
             </div>
 
             <!-- STEP 3 (locked until step 2) -->
-            <div data-brief-panel="3" style="display:flex; flex-direction:column; gap:12px; opacity:0; transform:translateY(10px); max-height:0; overflow:hidden; pointer-events:none; transition:opacity .5s ease, transform .5s ease, max-height .5s ease;">
+            <div data-brief-panel="3" style="display:none; flex-direction:column; gap:12px; opacity:0; transform:translateY(10px); max-height:0; overflow:hidden; pointer-events:none; transition:opacity .5s ease, transform .5s ease, max-height .5s ease;">
               <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9A9AA4;">03 — Timeline</span>
               <div data-brief-group="timeline" style="display:flex; flex-wrap:wrap; gap:10px;">
                 <button type="button" data-chip="we're still exploring" style="font-family:var(--font-sans); font-size:16px; line-height:1.2; letter-spacing:0; color:#C2C2CB; background:#18181B; border:1px solid rgba(255,255,255,.16); border-radius:8px; padding:11px 15px; cursor:pointer; transition:border-color .18s ease, background .18s ease, color .18s ease, transform .18s ease;" style-hover="border-color:rgba(255,255,255,.42)">Exploring</button>
@@ -788,17 +899,17 @@
             </div>
 
             <!-- BRIEF + FORM (locked until step 3) -->
-            <div data-brief-final style="display:flex; flex-direction:column; gap:18px; opacity:0; transform:translateY(10px); max-height:0; overflow:hidden; pointer-events:none; transition:opacity .5s ease, transform .5s ease, max-height .6s ease;">
+            <div data-brief-final="" style="display:none; flex-direction:column; gap:18px; opacity:0; transform:translateY(10px); max-height:0; overflow:hidden; pointer-events:none; transition:opacity .5s ease, transform .5s ease, max-height .6s ease;">
               <div style="background:#121214; border:1px solid rgba(255,255,255,.14); border-top:2px solid #B7C94A; border-radius:12px; padding:22px 24px;">
                 <span style="font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9A9AA4;">Your brief</span>
-                <p data-brief-text style="font-family:var(--font-display); font-weight:400; font-size:clamp(20px,2.1vw,27px); line-height:1.32; letter-spacing:0; margin:12px 0 0; color:#F4F4EF; min-height:2.6em;">Pick what fits — your brief writes itself.</p>
+                <p data-brief-text="" style="font-family:var(--font-display); font-weight:400; font-size:clamp(20px,2.1vw,27px); line-height:1.32; letter-spacing:0; margin:12px 0 0; color:#F4F4EF; min-height:2.6em;">Pick what fits — your brief writes itself.</p>
               </div>
-              <div data-brief-formgrid style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-                <input data-brief-name type="text" placeholder="Your name" style="font-family:var(--font-sans); font-size:16px; letter-spacing:0; color:#F4F4EF; background:#18181B; border:1px solid rgba(255,255,255,.18); border-radius:8px; padding:13px 16px; outline:none; box-sizing:border-box; min-width:0;">
-                <input data-brief-email type="email" placeholder="Your email" style="font-family:var(--font-sans); font-size:16px; letter-spacing:0; color:#F4F4EF; background:#18181B; border:1px solid rgba(255,255,255,.18); border-radius:8px; padding:13px 16px; outline:none; box-sizing:border-box; min-width:0;">
+              <div data-brief-formgrid="" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+                <input data-brief-name="" type="text" placeholder="Your name" style="font-family:var(--font-sans); font-size:16px; letter-spacing:0; color:#F4F4EF; background:#18181B; border:1px solid rgba(255,255,255,.18); border-radius:8px; padding:13px 16px; outline:none; box-sizing:border-box; min-width:0;">
+                <input data-brief-email="" type="email" placeholder="Your email" style="font-family:var(--font-sans); font-size:16px; letter-spacing:0; color:#F4F4EF; background:#18181B; border:1px solid rgba(255,255,255,.18); border-radius:8px; padding:13px 16px; outline:none; box-sizing:border-box; min-width:0;">
               </div>
-              <a data-brief-send href="mailto:deckhaus@pm.me" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#B7C94A; color:#0A0A0B; font-family:var(--font-sans); font-weight:700; font-size:17px; letter-spacing:0; padding:15px 24px; border-radius:8px; text-decoration:none; transition:background .18s ease, opacity .18s ease; opacity:.45; pointer-events:none;" style-hover="background:#C6D85E">Send my brief <span aria-hidden="true">&rarr;</span></a>
-              <span data-brief-hint style="font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; color:#6E6E78;">Add your name and email to send.</span>
+              <button type="button" data-brief-send="" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; background:#B7C94A; color:#0A0A0B; font-family:var(--font-sans); font-weight:700; font-size:17px; letter-spacing:0; padding:15px 24px; border:0; border-radius:8px; cursor:pointer; transition:background .18s ease, opacity .18s ease, border-color .18s ease; opacity:.45; pointer-events:none;" style-hover="background:#C6D85E">Send my brief <span aria-hidden="true">→</span></button>
+              <span data-brief-hint="" style="font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; color:#6E6E78;">Add your name and email to send.</span>
             </div>
 
           </div>
@@ -811,13 +922,30 @@
           <p style="font-family:var(--font-display); font-weight:400; font-size:26px; line-height:1.3; letter-spacing:0; margin:0 0 6px; color:#0A0A0B;">Rodrigo García</p>
           <p style="font-family:var(--font-mono); font-size:13px; letter-spacing:.1em; text-transform:uppercase; margin:0 0 22px; color:#5C5C64;">Founder &amp; Design Lead</p>
           <div style="display:flex; flex-direction:column; gap:12px; font-family:var(--font-mono); font-size:15px; line-height:1.45; letter-spacing:.02em; color:#34343A;">
-            <span><span style="color:#9EAD3F;">Email</span>&nbsp;&nbsp;deckhaus<wbr>&#64;<wbr>pm.me</span>
+            <span><span style="color:#9EAD3F;">Email</span>&nbsp;&nbsp;deckhaus<wbr>@<wbr>pm.me</span>
             <span><span style="color:#9EAD3F;">WhatsApp</span>&nbsp;&nbsp;+34 644 536 058</span>
             <span><span style="color:#9EAD3F;">Web</span>&nbsp;&nbsp;www.deckhaus.studio</span>
             <span><span style="color:#9EAD3F;">Based in</span>&nbsp;&nbsp;Helsinki · Málaga</span>
           </div>
           <p style="font-family:var(--font-display); font-weight:400; font-size:24px; line-height:1.3; letter-spacing:0; margin:26px 0 0; color:#0A0A0B;">Present better. Communicate better. <span style="color:#9EAD3F;">Sell better.</span></p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SELECTED WORK FOR — client strip ═══════════ -->
+  <section style="position:relative; background:#F4F4EF; color:#0A0A0B; padding:clamp(52px,6vw,84px) 0; border-top:1px solid rgba(10,10,11,.10); overflow:hidden;">
+    <div style="position:relative; width:100%; max-width:1180px; margin:0 auto; padding:0 clamp(24px,6vw,80px); box-sizing:border-box;">
+      <div data-reveal="0" style="display:flex; align-items:center; gap:14px; justify-content:center; font-family:var(--font-mono); font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:#9EAD3F; margin-bottom:clamp(28px,3.5vw,44px);">
+        <span style="width:30px; height:2px; background:#9EAD3F; display:block;"></span>Selected work for
+      </div>
+      <div data-reveal="0.08" data-logo-strip="" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:clamp(30px,4.5vw,68px);">
+        <img src="assets/logos/lacoste-black.png" alt="Lacoste" style="height:clamp(19px,2.2vw,28px); width:auto; display:block; opacity:.82;">
+        <img src="assets/logos/rolex-black.svg" alt="Rolex" style="height:clamp(40px,4.6vw,56px); width:auto; display:block; opacity:.82;">
+        <img src="assets/logos/jura-black.png" alt="JURA" style="height:clamp(25px,2.9vw,37px); width:auto; display:block; opacity:.82;">
+        <img src="assets/logos/mango-black.png" alt="MANGO" style="height:clamp(16px,1.9vw,24px); width:auto; display:block; opacity:.82;">
+        <img src="assets/logos/on-black.svg" alt="On" style="height:clamp(38px,4.4vw,53px); width:auto; display:block; opacity:.82;">
+        <img src="assets/logos/tedx-black.png" alt="TEDx" style="height:clamp(22px,2.6vw,32px); width:auto; display:block; opacity:.82;">
       </div>
     </div>
   </section>
@@ -854,6 +982,46 @@ class Component extends DCLogic {
     wait();
   }
 
+  _setupHeroGlow() {
+    const hero = document.querySelector('[data-hero-glow]');
+    if (!hero) return;
+    const glow = hero.querySelector('[data-grid-glow]');
+    const light = hero.querySelector('[data-cursor-light]');
+    const hasFine = window.matchMedia && window.matchMedia('(pointer:fine)').matches;
+    let cx = 0, cy = 0, raf = null, active = false;
+    const apply = () => {
+      raf = null;
+      hero.style.setProperty('--mx', cx + 'px');
+      hero.style.setProperty('--my', cy + 'px');
+      if (light) { light.style.left = cx + 'px'; light.style.top = cy + 'px'; }
+    };
+    const queue = (x, y) => {
+      cx = x; cy = y;
+      if (!active) { active = true; if (glow) glow.style.opacity = '.55'; if (light) light.style.opacity = '1'; }
+      if (!raf) raf = requestAnimationFrame(apply);
+    };
+    if (hasFine) {
+      hero.addEventListener('pointermove', (e) => {
+        const r = hero.getBoundingClientRect();
+        queue(e.clientX - r.left, e.clientY - r.top);
+      });
+      hero.addEventListener('pointerleave', () => {
+        active = false;
+        if (glow) glow.style.opacity = '0';
+        if (light) light.style.opacity = '0';
+      });
+    } else {
+      let t = 0;
+      const orbit = () => {
+        const r = hero.getBoundingClientRect();
+        t += 0.006;
+        queue(r.width * (0.5 + 0.32 * Math.cos(t)), r.height * (0.5 + 0.26 * Math.sin(t * 1.3)));
+        requestAnimationFrame(orbit);
+      };
+      requestAnimationFrame(orbit);
+    }
+  }
+
   _init() {
     const showIndex = this.props.showIndex !== false;
     this._autoplay = this.props.autoplayWork !== false;
@@ -872,6 +1040,7 @@ class Component extends DCLogic {
       el.addEventListener('click', () => this._jump(parseInt(el.getAttribute('data-jump'), 10) || 0));
     });
 
+    this._setupHeroGlow();
     this._setupReveal();
     this._wireSlideshows();
     this._setupStepper();
@@ -880,6 +1049,8 @@ class Component extends DCLogic {
     this._setupCount();
     this._setupFigure();
     this._setupTilt();
+    this._setupFromTo();
+    this._setupDirectionRoom();
 
     this._onScroll = () => this._handleScroll();
     window.addEventListener('scroll', this._onScroll, { passive: true });
@@ -913,6 +1084,90 @@ class Component extends DCLogic {
     const dark = this._sections[act].getAttribute('data-theme') === 'dark';
     if (this._navWrap) this._navWrap.style.color = dark ? '#F4F4EF' : '#0A0A0B';
     if (this._backdrop) this._backdrop.style.backgroundColor = dark ? '#0A0A0B' : '#F4F4EF';
+  }
+
+  // From -> To: drag the handle to reveal the aligned "one system" over the scattered pieces.
+  _setupFromTo() {
+    const stage = document.querySelector('[data-ft-stage]');
+    const reveal = document.querySelector('[data-ft-scatter]');
+    const divider = document.querySelector('[data-ft-divider]');
+    const cap = document.querySelector('[data-ft-cap]');
+    if (!stage || !reveal || !divider) return;
+    let t = 0.4;
+    const apply = (withTransition) => {
+      const pct = (t * 100);
+      const ms = withTransition ? '.45s' : '0s';
+      reveal.style.transition = 'clip-path ' + ms + ' cubic-bezier(.16,1,.3,1)';
+      divider.style.transition = 'left ' + ms + ' cubic-bezier(.16,1,.3,1)';
+      reveal.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+      divider.style.left = pct + '%';
+      if (cap) {
+        const fragmented = t >= 0.5;
+        cap.textContent = fragmented ? 'Disconnected pieces — no system.' : 'One system — everything aligned.';
+        cap.style.color = fragmented ? '#9A9AA4' : '#C2C2CB';
+      }
+    };
+    const fromEvent = (e) => {
+      const r = stage.getBoundingClientRect();
+      const x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+      return Math.max(0, Math.min(1, x / r.width));
+    };
+    let dragging = false;
+    const down = (e) => { dragging = true; try { stage.setPointerCapture(e.pointerId); } catch (err) {} t = fromEvent(e); apply(true); e.preventDefault(); };
+    const move = (e) => { if (!dragging) return; t = fromEvent(e); apply(false); };
+    const up = () => { dragging = false; };
+    stage.addEventListener('pointerdown', down);
+    stage.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', up);
+    stage.addEventListener('pointercancel', up);
+    apply(false);
+    // one gentle invite the first time it scrolls into view
+    if (!this._reduce && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((ents) => {
+        ents.forEach((en) => {
+          if (en.isIntersecting) {
+            io.disconnect();
+            setTimeout(() => { if (!dragging) { t = 0.56; apply(true); setTimeout(() => { if (!dragging) { t = 0.4; apply(true); } }, 620); } }, 450);
+          }
+        });
+      }, { threshold: 0.4 });
+      io.observe(stage);
+    }
+  }
+
+  // Direction Room: pick one of three AI-explored routes; the others recede, the choice locks in.
+  _setupDirectionRoom() {
+    const cards = Array.from(document.querySelectorAll('[data-droom-card]'));
+    const status = document.querySelector('[data-droom-status]');
+    const dot = document.querySelector('[data-droom-dot]');
+    if (!cards.length) return;
+    const names = ['Editorial', 'Bold', 'Minimal'];
+    let chosen = -1;
+    const paint = () => {
+      cards.forEach((c, i) => {
+        const on = i === chosen;
+        const off = chosen >= 0 && !on;
+        const check = c.querySelector('[data-droom-check]');
+        const lid = c.querySelector('[data-droom-lid]');
+        c.style.borderColor = on ? '#9EAD3F' : 'rgba(10,10,11,.14)';
+        c.style.boxShadow = on ? '0 18px 44px rgba(10,10,11,.18)' : 'none';
+        c.style.transform = on ? 'translateY(-4px)' : 'translateY(0)';
+        c.style.opacity = off ? '.72' : '1';
+        c.style.filter = 'none';
+        if (lid) { lid.style.transform = on ? 'translateY(-100%)' : 'translateY(0)'; lid.style.opacity = on ? '0' : '1'; lid.style.pointerEvents = on ? 'none' : 'auto'; }
+        if (check) { check.style.opacity = on ? '1' : '0'; check.style.transform = on ? 'scale(1)' : 'scale(.6)'; }
+      });
+      if (status) status.textContent = chosen < 0 ? 'Tap a route to reveal the direction.' : ('Direction locked · ' + names[chosen] + ' — alignment before execution.');
+      if (status) status.style.color = chosen < 0 ? '#5C5C64' : '#0A0A0B';
+      if (dot) dot.style.background = chosen < 0 ? 'rgba(10,10,11,.25)' : '#9EAD3F';
+    };
+    cards.forEach((c, i) => {
+      const pill = c.querySelector('[data-droom-reveal]');
+      c.addEventListener('click', () => { chosen = (chosen === i) ? -1 : i; paint(); });
+      c.addEventListener('mouseenter', () => { if (i !== chosen) { c.style.borderColor = 'rgba(10,10,11,.34)'; if (pill) pill.style.transform = 'scale(1.06)'; } });
+      c.addEventListener('mouseleave', () => { if (i !== chosen) { c.style.borderColor = 'rgba(10,10,11,.14)'; if (pill) pill.style.transform = 'scale(1)'; } });
+    });
+    paint();
   }
 
   // (4) Count-up for the headline stat when it scrolls into view.
@@ -1094,6 +1349,8 @@ class Component extends DCLogic {
     const finalEl = root.querySelector('[data-brief-final]');
     const cells = Array.from(root.querySelectorAll('[data-machine-cell]'));
     const state = { need: [], moment: null, timeline: null };
+    let sending = false, sent = false;
+    const DEST_EMAIL = 'deckhaus@pm.me';
 
     const setChip = (btn, on) => {
       btn.style.background = on ? '#B7C94A' : '#18181B';
@@ -1110,10 +1367,12 @@ class Component extends DCLogic {
       c.style.borderColor = done ? 'rgba(183,201,74,.55)' : 'rgba(255,255,255,.14)';
       c.style.background = done ? '#16180F' : '#141417';
     };
-    const openPanel = (el) => {
+    const openPanel = (el, max) => {
       if (!el || el.dataset.open === '1') return;
       el.dataset.open = '1';
-      el.style.maxHeight = '460px';
+      el.style.display = 'flex';
+      void el.offsetHeight;
+      el.style.maxHeight = (max || 460) + 'px';
       el.style.opacity = '1';
       el.style.transform = 'none';
       el.style.pointerEvents = 'auto';
@@ -1127,7 +1386,7 @@ class Component extends DCLogic {
       lightCell(0, s1); lightCell(1, s2); lightCell(2, s3);
       if (s1) openPanel(panels[2]);
       if (s2) openPanel(panels[3]);
-      if (s3) openPanel(finalEl);
+      if (s3) openPanel(finalEl, 760);
       const step = s3 ? 3 : s2 ? 3 : s1 ? 2 : 1;
       if (stepEl) stepEl.textContent = 'Step 0' + step + ' / 03';
 
@@ -1143,14 +1402,11 @@ class Component extends DCLogic {
       const nm = (nameEl && nameEl.value || '').trim();
       const em = (emailEl && emailEl.value || '').trim();
       const ready = s3 && nm && emailOk(em);
-      if (sendEl) {
+      if (sendEl && !sending && !sent) {
         sendEl.style.opacity = ready ? '1' : '.45';
         sendEl.style.pointerEvents = ready ? 'auto' : 'none';
-        let body = s + '\n\n\u2014 ' + (nm || '') + (em ? '\n' + em : '');
-        body += '\n\n(Sent from the Deckhaus guide)';
-        sendEl.href = 'mailto:deckhaus@pm.me?subject=' + encodeURIComponent('New project brief \u00b7 Deckhaus') + '&body=' + encodeURIComponent(body);
       }
-      if (hintEl) {
+      if (hintEl && !sending && !sent) {
         hintEl.textContent = ready ? 'Ready \u2014 your brief is written. Tap send.'
           : !nm ? 'Add your name and email to send.'
           : !emailOk(em) ? 'Add a valid email to send.'
@@ -1178,6 +1434,50 @@ class Component extends DCLogic {
         update();
       }));
     });
+    const submit = () => {
+      if (sending || sent) return;
+      const nm = (nameEl && nameEl.value || '').trim();
+      const em = (emailEl && emailEl.value || '').trim();
+      if (!(state.timeline && nm && emailOk(em))) return;
+      sending = true;
+      sendEl.style.pointerEvents = 'none';
+      sendEl.style.opacity = '.7';
+      sendEl.textContent = 'Sending\u2026';
+      if (hintEl) { hintEl.textContent = 'Sending your brief\u2026'; hintEl.style.color = '#9A9AA4'; }
+      fetch('https://formsubmit.co/ajax/' + DEST_EMAIL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'New project brief \u00b7 Deckhaus',
+          _template: 'table',
+          _captcha: 'false',
+          Name: nm,
+          Email: em,
+          'What they need': state.need.join(', '),
+          'The moment': state.moment || '',
+          Timeline: state.timeline || '',
+          Brief: textEl ? textEl.textContent : ''
+        })
+      }).then((r) => { if (!r.ok) throw new Error('http ' + r.status); return r.json().catch(() => ({})); })
+        .then(() => {
+          sent = true; sending = false;
+          sendEl.textContent = 'Brief sent';
+          sendEl.style.background = '#16180F';
+          sendEl.style.color = '#B7C94A';
+          sendEl.style.border = '1px solid rgba(183,201,74,.55)';
+          sendEl.style.opacity = '1';
+          sendEl.style.pointerEvents = 'none';
+          if (hintEl) { hintEl.textContent = 'Thanks, ' + nm + ' \u2014 we\u2019ll reply to ' + em + ' shortly.'; hintEl.style.color = '#B7C94A'; }
+        })
+        .catch(() => {
+          sending = false;
+          sendEl.textContent = 'Send my brief \u2192';
+          sendEl.style.opacity = '1';
+          sendEl.style.pointerEvents = 'auto';
+          if (hintEl) { hintEl.textContent = 'Couldn\u2019t send just now \u2014 email us at ' + DEST_EMAIL + '.'; hintEl.style.color = '#D98B5F'; }
+        });
+    };
+    if (sendEl) sendEl.addEventListener('click', submit);
     if (nameEl) nameEl.addEventListener('input', update);
     if (emailEl) emailEl.addEventListener('input', update);
     update();
